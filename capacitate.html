@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pregătire Capacitate AI — Verumsell</title>
+  <meta name="description" content="Aplicație AI pentru pregătirea examenului de Capacitate. Subiecte simulate, feedback instant, plan personalizat. Matematică și Limba Română." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/capacitate.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body class="page-capacitate">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Verumsell</a>
+    <div class="nav-links">
+      <a href="../index.html#produse">Produse</a>
+      <a href="../index.html#despre">Despre</a>
+      <a href="#incepe" class="btn-nav">Încearcă acum →</a>
+    </div>
+    <button class="nav-toggle" aria-label="Meniu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO PRODUS -->
+  <section class="prod-hero">
+    <div class="prod-hero-inner">
+      <div class="prod-hero-text">
+        <div class="breadcrumb"><a href="../index.html">Verumsell</a> / Capacitate</div>
+        <div class="hero-badge">Disponibil acum — Gratuit</div>
+        <h1>Examenul de Capacitate<br/><em>Stăpânit.</em></h1>
+        <p class="hero-sub">Un tutor AI care te pregătește exact pentru ce contează — subiecte reale, feedback instant și plan adaptat ție. Nu un curs generic. Pregătire care funcționează.</p>
+        <div class="hero-cta">
+          <a href="#incepe" class="btn-primary">Începe acum — e gratuit →</a>
+          <a href="#cum-functioneaza" class="btn-ghost">Cum funcționează</a>
+        </div>
+        <div class="hero-pills">
+          <span>✓ Matematică</span>
+          <span>✓ Limba Română</span>
+          <span>✓ Subiecte simulate</span>
+          <span>✓ Fără cont necesar</span>
+        </div>
+      </div>
+      <div class="prod-hero-demo" aria-hidden="true">
+        <div class="demo-window">
+          <div class="demo-top">
+            <div class="demo-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="demo-title">Capacitate AI — sesiune activă</div>
+          </div>
+          <div class="demo-body">
+            <div class="demo-question">
+              <div class="demo-q-label">Matematică · Exercițiul 3</div>
+              <div class="demo-q-text">Determină mulțimea soluțiilor ecuației: <strong>2x + 5 = 13</strong></div>
+            </div>
+            <div class="demo-answer">
+              <div class="demo-a-label">Răspunsul tău</div>
+              <div class="demo-a-input">x = 4</div>
+              <div class="demo-a-check correct">✓ Corect!</div>
+            </div>
+            <div class="demo-feedback">
+              <div class="demo-fb-icon">🤖</div>
+              <div class="demo-fb-text">Bine! Ai izolat corect variabila. Pasul următor: încearcă același tip de ecuație cu coeficienți negativi.</div>
+            </div>
+            <div class="demo-progress-bar">
+              <div class="demo-progress-fill" style="width: 65%"></div>
+              <span>Sesiune: 65% completă</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS RAPIDE -->
+  <section class="quick-stats">
+    <div class="quick-stats-inner">
+      <div class="qstat">
+        <div class="qstat-num">2</div>
+        <div class="qstat-label">Materii acoperite</div>
+      </div>
+      <div class="qstat">
+        <div class="qstat-num">AI</div>
+        <div class="qstat-label">Tutor personalizat</div>
+      </div>
+      <div class="qstat">
+        <div class="qstat-num">0€</div>
+        <div class="qstat-label">Cost de start</div>
+      </div>
+      <div class="qstat">
+        <div class="qstat-num">∞</div>
+        <div class="qstat-label">Subiecte generate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUM FUNCȚIONEAZĂ -->
+  <section class="section" id="cum-functioneaza">
+    <div class="section-header">
+      <div class="section-label">Metodă</div>
+      <h2>Nu memorezi. Înveți să gândești.</h2>
+      <p>Aplicația nu îți dă răspunsuri. Te ghidează să le găsești singur — exact cum gândește un profesor bun.</p>
+    </div>
+
+    <div class="steps-flow">
+      <div class="step-item">
+        <div class="step-icon">🎯</div>
+        <div class="step-content">
+          <h3>Evaluare de nivel</h3>
+          <p>Primele exerciții identifică unde ești. AI-ul nu presupune — verifică. Îți construiește un profil exact în câteva minute.</p>
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-icon">🧠</div>
+        <div class="step-content">
+          <h3>Subiecte simulate</h3>
+          <p>Exerciții generate după modelul subiectului oficial de Capacitate. Matematică și Română, toate capitolele din programă.</p>
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-icon">💡</div>
+        <div class="step-content">
+          <h3>Feedback instant</h3>
+          <p>Fiecare greșeală e explicată pas cu pas. Nu „incorect" — ci „iată de ce și cum se rezolvă corect".</p>
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-icon">📈</div>
+        <div class="step-content">
+          <h3>Progres vizibil</h3>
+          <p>Dashboard clar. Știi exact ce ai rezolvat, unde ai greșit și ce urmează. Fără ghicit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERII -->
+  <section class="section section-alt" id="materii">
+    <div class="section-header">
+      <div class="section-label">Conținut</div>
+      <h2>Ce acoperă aplicația</h2>
+    </div>
+    <div class="subjects-grid">
+      <div class="subject-card">
+        <div class="subject-icon">📐</div>
+        <h3>Matematică</h3>
+        <ul class="subject-topics">
+          <li>Mulțimi și operații</li>
+          <li>Numere reale și calcul algebric</li>
+          <li>Ecuații și inecuații</li>
+          <li>Geometrie plană</li>
+          <li>Funcții și reprezentări grafice</li>
+          <li>Statistică și probabilitate</li>
+        </ul>
+        <div class="subject-badge">Programă oficială 2024–2025</div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-icon">📖</div>
+        <h3>Limba Română</h3>
+        <ul class="subject-topics">
+          <li>Înțelegerea textului (citire)</li>
+          <li>Vocabular și noțiuni de limbă</li>
+          <li>Morfologie și sintaxă</li>
+          <li>Redactare — texte diverse</li>
+          <li>Compunere narativă și descriptivă</li>
+          <li>Opere literare studiate în clasă</li>
+        </ul>
+        <div class="subject-badge">Programă oficială 2024–2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALE / BENEFICII -->
+  <section class="section section-dark" id="beneficii">
+    <div class="section-header">
+      <div class="section-label light">De ce funcționează</div>
+      <h2>Diferența față de un manual</h2>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-col compare-old">
+        <div class="compare-header">Manual tradițional</div>
+        <div class="compare-item bad">Același ritm pentru toți</div>
+        <div class="compare-item bad">Feedback după zile (de la profesor)</div>
+        <div class="compare-item bad">Nu știi ce nu știi</div>
+        <div class="compare-item bad">Exerciții limitate</div>
+        <div class="compare-item bad">Fără urmărire a progresului</div>
+      </div>
+      <div class="compare-col compare-new">
+        <div class="compare-header">Capacitate AI</div>
+        <div class="compare-item good">Adaptat la nivelul tău</div>
+        <div class="compare-item good">Feedback instant, pas cu pas</div>
+        <div class="compare-item good">Identifică lacunele automat</div>
+        <div class="compare-item good">Subiecte nelimitate, generate AI</div>
+        <div class="compare-item good">Dashboard cu progres real</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / START -->
+  <section class="section-cta" id="incepe">
+    <div class="cta-content">
+      <div class="cta-badge">Gratuit pentru start</div>
+      <h2>Examenul e în<br/><em>câteva luni.</em></h2>
+      <p>Fiecare zi contează. Nu ai nevoie de un cont, de o carte de credit sau de 40 de minute libere. 10 minute azi pot schimba rezultatul de la examen.</p>
+      <a href="#" class="btn-primary btn-large" onclick="alert('Aplicația se lansează în curând! Lasă-ne emailul pentru a fi primul notificat.')">Începe acum →</a>
+      <div class="cta-note">Gratuit · Fără cont necesar · Funcționează pe orice dispozitiv</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-header">
+      <div class="section-label">Întrebări</div>
+      <h2>Răspunsuri rapide</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Este aplicația cu adevărat gratuită?</div>
+        <div class="faq-a">Da, versiunea de bază este complet gratuită și acoperă toate materiile. Pe viitor vom introduce un plan premium cu funcționalități avansate, dar accesul core va rămâne gratuit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Urmăresc exact programa oficială?</div>
+        <div class="faq-a">Da. Aplicația este calibrată pe programa națională pentru clasa a VIII-a, validată pentru sesiunea 2024–2025.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Am nevoie de cont pentru a folosi aplicația?</div>
+        <div class="faq-a">Nu pentru sesiunile de bază. Dacă vrei să-ți salvezi progresul și să revii la el mai târziu, un cont gratuit îți permite asta.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Funcționează pe telefon?</div>
+        <div class="faq-a">Da, aplicația este optimizată pentru orice dispozitiv — telefon, tabletă sau laptop.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Verumsell</div>
+        <div class="footer-tagline">Educație × AI</div>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Acasă</a>
+        <a href="../index.html#produse">Produse</a>
+        <a href="mailto:contact@verumsell.com">Contact</a>
+      </div>
+      <div class="footer-copy">© 2025 Verumsell. Toate drepturile rezervate.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verumsell — Educație și Performanță prin AI</title>
+  <meta name="description" content="Platformă AI pentru educație și training profesional. Aplicații inteligente pentru elevi, studenți și profesioniști." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">Verumsell</a>
+    <div class="nav-links">
+      <a href="#produse">Produse</a>
+      <a href="#despre">Despre</a>
+      <a href="pages/capacitate.html" class="btn-nav">Încearcă gratuit →</a>
+    </div>
+    <button class="nav-toggle" aria-label="Meniu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-text" aria-hidden="true">AI</div>
+    <div class="hero-content">
+      <div class="hero-badge">Educație × Inteligență Artificială</div>
+      <h1 class="hero-title">
+        Pregătit.<br/>
+        <em>Cu adevărat.</em>
+      </h1>
+      <p class="hero-sub">
+        Aplicații AI care adaptează fiecare sesiune de studiu la ritmul, stilul și obiectivele tale. De la examenul de Capacitate la cursuri profesionale — o singură platformă, rezultate reale.
+      </p>
+      <div class="hero-cta">
+        <a href="pages/capacitate.html" class="btn-primary">Examen Capacitate →</a>
+        <a href="#produse" class="btn-ghost">Vezi toate produsele</a>
+      </div>
+      <div class="hero-trust">
+        <span>✦ AI-powered</span>
+        <span>✦ Complet în română</span>
+        <span>✦ Personalizat</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="card-float card-1">
+        <div class="card-icon">📚</div>
+        <div class="card-label">Matematică</div>
+        <div class="card-score">94%</div>
+      </div>
+      <div class="card-float card-2">
+        <div class="card-icon">✍️</div>
+        <div class="card-label">Română</div>
+        <div class="card-score">88%</div>
+      </div>
+      <div class="card-float card-3">
+        <div class="card-icon">🎯</div>
+        <div class="card-label">Progres săptămânal</div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUSE -->
+  <section class="section" id="produse">
+    <div class="section-header">
+      <div class="section-label">Produse</div>
+      <h2>Aplicații pentru fiecare etapă</h2>
+      <p>Fiecare produs este construit în jurul unui singur scop: să te ducă mai departe.</p>
+    </div>
+
+    <div class="products-grid">
+      <!-- CAPACITATE — ACTIV -->
+      <a href="pages/capacitate.html" class="product-card product-active">
+        <div class="product-tag">Disponibil acum</div>
+        <div class="product-icon">🎓</div>
+        <h3>Pregătire Capacitate</h3>
+        <p>Antrenament inteligent pentru examenul național de Capacitate. Subiecte simulate, feedback instant și plan de studiu adaptat fiecărui elev.</p>
+        <div class="product-subjects">
+          <span>Matematică</span>
+          <span>Limba Română</span>
+        </div>
+        <div class="product-cta">Începe gratuit →</div>
+      </a>
+
+      <!-- BACALAUREAT — COMING SOON -->
+      <div class="product-card product-soon">
+        <div class="product-tag soon">În curând</div>
+        <div class="product-icon">🏆</div>
+        <h3>Pregătire Bacalaureat</h3>
+        <p>Tot arsenalul AI pentru examenul de maturitate. Toate profilurile, toate materiile — simulări complete adaptate la programa națională.</p>
+        <div class="product-subjects">
+          <span>Mate-Info</span>
+          <span>Uman</span>
+          <span>Tehnologic</span>
+        </div>
+        <div class="product-cta muted">Notifică-mă</div>
+      </div>
+
+      <!-- SALES — COMING SOON -->
+      <div class="product-card product-soon">
+        <div class="product-tag soon">În curând</div>
+        <div class="product-icon">⚡</div>
+        <h3>Cursuri Sales AI</h3>
+        <p>Training de vânzări de nivel enterprise, accesibil oricui. Scenarii reale, roleplay cu AI și feedback bazat pe date — nu pe intuiție.</p>
+        <div class="product-subjects">
+          <span>B2B Sales</span>
+          <span>Negociere</span>
+          <span>Closing</span>
+        </div>
+        <div class="product-cta muted">Notifică-mă</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUM FUNCȚIONEAZĂ -->
+  <section class="section section-dark" id="cum">
+    <div class="section-header">
+      <div class="section-label light">Metodă</div>
+      <h2>De ce AI schimbă jocul</h2>
+    </div>
+    <div class="method-grid">
+      <div class="method-step">
+        <div class="step-num">01</div>
+        <h3>Evaluare inițială</h3>
+        <p>AI-ul identifică lacunele reale, nu le presupune. Pornești de exact de unde ai nevoie.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">02</div>
+        <h3>Sesiuni adaptate</h3>
+        <p>Fiecare exercițiu este calibrat la nivelul tău curent. Dificultatea crește odată cu tine.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">03</div>
+        <h3>Feedback imediat</h3>
+        <p>Nu trebuie să aștepți un profesor. Greșelile sunt explicate, nu doar marcate.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">04</div>
+        <h3>Progres măsurabil</h3>
+        <p>Dashboard clar, evoluție vizibilă. Știi exact unde ești și unde trebuie să ajungi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section class="section" id="despre">
+    <div class="about-layout">
+      <div class="about-text">
+        <div class="section-label">Despre Verumsell</div>
+        <h2>Construim pentru rezultate reale</h2>
+        <p>Verumsell a pornit ca platformă de training în vânzări și a evoluat spre ceva mai amplu: un ecosistem de aplicații AI pentru educație și dezvoltare profesională.</p>
+        <p>Fiecare produs pornește de la o convingere simplă — că oricine, cu instrumentele potrivite, poate performa la cel mai înalt nivel.</p>
+        <p class="about-tagline">„Verum" înseamnă adevăr. „Sell" înseamnă convingere. Educăm prin ambele.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">AI</div>
+          <div class="stat-label">Powered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">În română</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Produse în pipeline</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section-cta">
+    <h2>Gata să începi?</h2>
+    <p>Primul pas costă zero. Testează aplicația pentru Capacitate acum.</p>
+    <a href="pages/capacitate.html" class="btn-primary btn-large">Încearcă gratuit →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Verumsell</div>
+        <div class="footer-tagline">Educație × AI</div>
+      </div>
+      <div class="footer-links">
+        <a href="pages/capacitate.html">Capacitate</a>
+        <a href="#produse">Produse</a>
+        <a href="mailto:contact@verumsell.com">Contact</a>
+      </div>
+      <div class="footer-copy">© 2025 Verumsell. Toate drepturile rezervate.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
