@@ -36,7 +36,7 @@ export default function Footer() {
             <Link href="/work">Work</Link>
             <Link href="/about">About</Link>
             <Link href="/journal">Journal</Link>
-            <Link href="/contact">Contact</Link>
+            <a href="mailto:colinbuzoianu@verumsell.com">colinbuzoianu@verumsell.com</a>
           </FooterCol>
 
           <FooterCol title="Live products">
