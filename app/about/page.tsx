@@ -42,7 +42,7 @@ export default function AboutPage() {
         </h1>
       </section>
 
-      {/* origin */}
+      {/* origin — two column with photo */}
       <section
         style={{
           padding: "80px 32px",
@@ -59,19 +59,54 @@ export default function AboutPage() {
             01 / Origin
           </div>
         </div>
-        <div style={{ fontSize: 22, lineHeight: 1.6, color: "var(--ink-soft)" }}>
-          <p style={{ marginBottom: 32 }}>
-            Verumsell is an independent product studio founded by{" "}
-            <strong style={{ color: "var(--ink)" }}>Colin Buzoianu</strong> in Timișoara, Romania.
-          </p>
-          <p style={{ marginBottom: 32 }}>
-            The brief is simple: the world has plenty of AI wrappers. What it doesn't have enough of
-            is AI applications built on actual expertise — the kind of products where the prompt
-            logic is informed by years of practice in a real domain.
-          </p>
-          <p>
-            Verumsell builds those.
-          </p>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 56, alignItems: "flex-start" }}>
+          {/* photo */}
+          <div style={{ position: "relative" }}>
+            <img
+              src="/brand/colin.jpg"
+              alt="Colin Buzoianu"
+              style={{
+                width: "100%",
+                aspectRatio: "3/4",
+                objectFit: "cover",
+                objectPosition: "center top",
+                display: "block",
+                filter: "grayscale(15%)",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: "20px 20px 16px",
+                background: "linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 100%)",
+              }}
+            >
+              <div style={{ color: "var(--paper)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase" }}>
+                Colin Buzoianu
+              </div>
+              <div style={{ color: "rgba(242,239,233,0.7)", fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 4 }}>
+                Founder · Timișoara, Romania
+              </div>
+            </div>
+          </div>
+          {/* text */}
+          <div style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
+            <p style={{ marginBottom: 24 }}>
+              Verumsell is an independent product studio founded by{" "}
+              <strong style={{ color: "var(--ink)" }}>Colin Buzoianu</strong> in Timișoara, Romania.
+            </p>
+            <p style={{ marginBottom: 24 }}>
+              The brief is simple: the world has plenty of AI wrappers. What it doesn't have enough of
+              is AI applications built on actual expertise — the kind of products where the logic is
+              informed by years of practice in a real domain.
+            </p>
+            <p>
+              Verumsell builds those.
+            </p>
+          </div>
         </div>
       </section>
 
