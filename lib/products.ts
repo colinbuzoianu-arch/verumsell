@@ -13,9 +13,9 @@ export interface Product {
   accentInk: string;
   background: string;
   description: string;
-  expertLayer: string; // "the expert system behind the AI"
+  expertLayer: string;
   audience: string;
-  highlights: string[]; // 3-4 bullet points
+  highlights: string[];
 }
 
 export const PRODUCTS: Product[] = [
@@ -26,6 +26,7 @@ export const PRODUCTS: Product[] = [
     category: "Health & Wellness",
     status: "live",
     year: "2026",
+    url: "https://vivo-lilac.vercel.app",
     accent: "var(--remedium)",
     accentInk: "#1F3A1A",
     background: "linear-gradient(135deg, #E8EDD9 0%, #DDD3B8 100%)",
@@ -48,6 +49,7 @@ export const PRODUCTS: Product[] = [
     category: "Education",
     status: "live",
     year: "2026",
+    url: "https://examen-capacitate-ari.vercel.app",
     accent: "var(--studiu)",
     accentInk: "#3A0E07",
     background: "linear-gradient(135deg, #FCE5E1 0%, #D6E3EE 100%)",
@@ -66,47 +68,49 @@ export const PRODUCTS: Product[] = [
   {
     slug: "splitornot",
     name: "SplitOrNot",
-    tagline: "The relationship expiration date",
+    tagline: "Relationship health, honestly scored",
     category: "Relationships",
     status: "live",
     year: "2026",
+    url: "https://splitornot.com",
     subBrand: "CoupleIQ",
     accent: "var(--coupleiq)",
     accentInk: "#3A1208",
     background: "linear-gradient(135deg, #F5EBD8 0%, #E8C9BA 100%)",
     description:
-      "A 5-minute analysis that gives you an honest read on where your relationship is heading. Built on Gottman, attachment theory, and 40 years of relationship science — not vibes.",
+      "A multi-dimensional relationship health analyzer. Maps communication, intimacy, alignment, and conflict patterns — then names the risks and prescribes what to actually change.",
     expertLayer:
-      "Question set designed against established relationship science: the Gottman Method's predictors, attachment theory, and conflict-pattern research. The AI synthesises a forecast, not a horoscope.",
-    audience: "Couples who feel something is off and want a clear, private read on what.",
+      "Built on the Gottman Method's predictors, attachment theory, and conflict-style research. Every insight ties back to a specific answer pattern — diagnostic, not generic.",
+    audience: "Couples ready to get an honest read and do the work.",
     highlights: [
-      "5-minute, 15-question diagnostic",
-      "Relationship forecast with risk and improvement vectors",
-      "Built on Gottman + attachment + conflict-style frameworks",
-      "Private — no answers stored",
+      "Multi-dimensional relationship audit across 4 domains",
+      "Specific risks named, not glossed over",
+      "Concrete improvement vectors — what to actually change",
+      "Built on 40 years of relationship science",
     ],
   },
   {
-    slug: "couple-analyzer",
-    name: "Couple Analyzer",
-    tagline: "Diagnose, don't guess",
+    slug: "expiration-date",
+    name: "Expiration Date",
+    tagline: "Does your relationship have an end date?",
     category: "Relationships",
     status: "live",
     year: "2026",
+    url: "https://getexpirationdate.com",
     subBrand: "CoupleIQ",
     accent: "var(--coupleiq)",
     accentInk: "#3A1208",
     background: "linear-gradient(135deg, #F0DCC8 0%, #D9A892 100%)",
     description:
-      "A deeper companion to SplitOrNot. Maps strengths, surfaces hidden risks, and prescribes specific improvements — the things couples therapy would actually flag.",
+      "A 5-minute forecast that tells you where your relationship is heading. Punchy, private, and built on the same science therapists use — not vibes.",
     expertLayer:
-      "Multi-dimensional analysis across communication, intimacy, alignment, and conflict patterns. Outputs are diagnostic, not generic — every insight ties back to a specific answer pattern.",
-    audience: "Couples ready to do the work, not just take a quiz.",
+      "Question set designed against the Gottman Method's predictors, attachment theory, and conflict-pattern research. The AI synthesises a forecast, not a horoscope.",
+    audience: "Couples who feel something is off and want a clear, private read on what.",
     highlights: [
-      "Multi-dimensional relationship audit",
-      "Specific risks named, not glossed over",
-      "Concrete improvement vectors — what to actually change",
-      "Pairs naturally with SplitOrNot for full picture",
+      "5-minute, 15-question diagnostic",
+      "Relationship forecast with risk vectors",
+      "Built on Gottman + attachment + conflict-style frameworks",
+      "Private — no answers stored",
     ],
   },
   {
@@ -116,6 +120,7 @@ export const PRODUCTS: Product[] = [
     category: "Spirituality",
     status: "beta",
     year: "2026",
+    url: "https://project-qdb1y.vercel.app",
     subBrand: "Anima Mundi",
     accent: "var(--animamundi)",
     accentInk: "#E8D8A8",
