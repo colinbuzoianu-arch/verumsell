@@ -23,9 +23,18 @@ export default function Footer() {
           }}
         >
           <div>
-            <div className="display" style={{ fontSize: 36, lineHeight: 1, marginBottom: 16 }}>
-              Verumsell
-            </div>
+            {/* Logo in footer — inverted to show on dark background */}
+            <img
+              src="/brand/verumsell-flat.png"
+              alt="Verumsell"
+              style={{
+                height: 28,
+                width: "auto",
+                display: "block",
+                marginBottom: 20,
+                filter: "invert(1)",
+              }}
+            />
             <p style={{ color: "#9C968B", fontSize: 14, lineHeight: 1.7, maxWidth: 320 }}>
               An independent product studio building expert-driven AI applications. Founded in
               Timișoara, Romania.
@@ -36,19 +45,23 @@ export default function Footer() {
             <Link href="/work">Work</Link>
             <Link href="/about">About</Link>
             <Link href="/journal">Journal</Link>
-            <a href="mailto:colinbuzoianu@verumsell.com">colinbuzoianu@verumsell.com</a>
+            <Link href="/contact">Contact</Link>
           </FooterCol>
 
           <FooterCol title="Live products">
-            <a href="#" target="_blank" rel="noreferrer">Remedium</a>
-            <a href="#" target="_blank" rel="noreferrer">Studiu EN26</a>
-            <a href="#" target="_blank" rel="noreferrer">SplitOrNot</a>
-            <a href="#" target="_blank" rel="noreferrer">Anima Mundi</a>
+            <a href="https://vivo-lilac.vercel.app" target="_blank" rel="noreferrer">Remedium</a>
+            <a href="https://examen-capacitate-ari.vercel.app" target="_blank" rel="noreferrer">Studiu EN26</a>
+            <a href="https://splitornot.com" target="_blank" rel="noreferrer">SplitOrNot</a>
+            <a href="https://getexpirationdate.com" target="_blank" rel="noreferrer">Expiration Date</a>
+            <a href="https://project-qdb1y.vercel.app" target="_blank" rel="noreferrer">Anima Mundi</a>
           </FooterCol>
 
           <FooterCol title="Sub-brands">
             <Link href="/work/coupleiq">CoupleIQ</Link>
             <Link href="/work/anima-mundi">Anima Mundi</Link>
+            <a href="mailto:colinbuzoianu@verumsell.com" style={{ marginTop: 16, display: "block", color: "#9C968B", fontSize: 13 }}>
+              colinbuzoianu@verumsell.com
+            </a>
           </FooterCol>
         </div>
 
