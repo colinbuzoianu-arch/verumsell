@@ -86,18 +86,13 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   );
 }
 
-/* ── compact wordmark — re-creates the Verumsell logo as inline SVG ─────── */
+/* ── wordmark — uses the actual uploaded logo PNG ─────── */
 function Wordmark() {
   return (
-    <svg width="138" height="34" viewBox="0 0 138 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Verumsell">
-      {/* VERUM */}
-      <text x="0" y="14" fontFamily="Inter, sans-serif" fontWeight="900" fontSize="14" letterSpacing="0.5" fill="var(--ink)">VERUM</text>
-      {/* horizontal bar to the right of VERUM */}
-      <rect x="50" y="9" width="22" height="3.2" fill="var(--ink)" />
-      {/* horizontal bar below VERUM */}
-      <rect x="6" y="20" width="38" height="3.2" fill="var(--ink)" />
-      {/* SELL */}
-      <text x="78" y="28" fontFamily="Inter, sans-serif" fontWeight="900" fontSize="14" letterSpacing="0.5" fill="var(--ink)">SELL</text>
-    </svg>
+    <img
+      src="/brand/verumsell-flat.png"
+      alt="Verumsell"
+      style={{ height: 28, width: "auto", display: "block" }}
+    />
   );
 }
