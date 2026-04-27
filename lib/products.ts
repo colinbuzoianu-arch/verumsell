@@ -49,7 +49,7 @@ export const PRODUCTS: Product[] = [
     category: "Education",
     status: "live",
     year: "2026",
-    url: "https://examen-capacitate-ari.vercel.app",
+    url: "https://en26.verumsell.com",
     accent: "var(--studiu)",
     accentInk: "#3A0E07",
     background: "linear-gradient(135deg, #FCE5E1 0%, #D6E3EE 100%)",
