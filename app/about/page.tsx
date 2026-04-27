@@ -63,7 +63,7 @@ export default function AboutPage() {
           {/* photo */}
           <div style={{ position: "relative" }}>
             <img
-              src="/brand/colin.jpg"
+              src="/brand/colin.JPG"
               alt="Colin Buzoianu"
               style={{
                 width: "100%",
