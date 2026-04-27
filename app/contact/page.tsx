@@ -59,8 +59,8 @@ export default function ContactPage() {
       >
         <ContactCard
           label="Email"
-          value="hello@verumsell.com"
-          onCopy={() => copy("hello@verumsell.com")}
+          value="colinbuzoianu@verumsell.com"
+          onCopy={() => copy("colinbuzoianu@verumsell.com")}
           large
         />
         <ContactCard
