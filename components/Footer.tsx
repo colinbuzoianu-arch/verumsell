@@ -50,7 +50,7 @@ export default function Footer() {
 
           <FooterCol title="Live products">
             <a href="https://vivo-lilac.vercel.app" target="_blank" rel="noreferrer">Remedium</a>
-            <a href="https://examen-capacitate-ari.vercel.app" target="_blank" rel="noreferrer">Studiu EN26</a>
+            <a href="https://en26.verumsell.com" target="_blank" rel="noreferrer">Studiu EN26</a>
             <a href="https://splitornot.com" target="_blank" rel="noreferrer">SplitOrNot</a>
             <a href="https://getexpirationdate.com" target="_blank" rel="noreferrer">Expiration Date</a>
             <a href="https://project-qdb1y.vercel.app" target="_blank" rel="noreferrer">Anima Mundi</a>
