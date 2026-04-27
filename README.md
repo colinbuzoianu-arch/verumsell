@@ -6,7 +6,7 @@ The studio site for Verumsell — an independent product studio building expert-
 
 - **Framework:** Next.js 14 (App Router)
 - **Language:** TypeScript
-- **Styling:** Plain CSS with CSS variables (no Tailwind, no CSS-in-JS runtime)
+- **Styling:** Plain CSS with CSS variables (no Tailwind, no CSS-in-JS runtime) 
 - **Fonts:** Fraunces (display) · JetBrains Mono · Inter — loaded from Google Fonts
 - **Deployment:** Vercel
 
