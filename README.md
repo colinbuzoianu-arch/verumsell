@@ -1,47 +1,103 @@
-# Verumsell — Site oficial
+# Verumsell
 
-Site static HTML/CSS pentru verumsell.com. Deploy pe Vercel via GitHub.
+The studio site for Verumsell — an independent product studio building expert-driven AI applications.
 
-## Structura proiect
+## Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Plain CSS with CSS variables (no Tailwind, no CSS-in-JS runtime)
+- **Fonts:** Fraunces (display) · JetBrains Mono · Inter — loaded from Google Fonts
+- **Deployment:** Vercel
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000`.
+
+## Project structure
 
 ```
-verumsell/
-├── index.html              # Landing page principal
-├── pages/
-│   └── capacitate.html     # Pagina produsului Capacitate
-├── css/
-│   ├── main.css            # Stiluri globale
-│   └── capacitate.css      # Stiluri specifice paginii Capacitate
-├── vercel.json             # Config Vercel
-└── README.md
+app/
+  layout.tsx              ← root layout, wraps everything in Nav + Footer
+  page.tsx                ← home page (hero, featured work, sub-brands, about teaser)
+  about/page.tsx          ← about the studio
+  contact/page.tsx        ← contact page
+  journal/page.tsx        ← studio journal (placeholder posts)
+  work/
+    page.tsx              ← full portfolio listing by category
+    [slug]/page.tsx       ← dynamic product detail page
+    coupleiq/page.tsx     ← CoupleIQ sub-brand page
+    anima-mundi/page.tsx  ← Anima Mundi sub-brand page
+
+components/
+  Nav.tsx                 ← top nav with inline SVG wordmark
+  Footer.tsx              ← footer
+
+lib/
+  products.ts             ← single source of truth for all product data
+
+styles/
+  globals.css             ← design tokens, typography, base styles
+
+public/brand/             ← Verumsell logo assets
 ```
 
-## Deploy pe Vercel (GitHub)
+## Deploying to Vercel
 
-1. Creează un repo GitHub și push folderul
-2. Du-te pe [vercel.com](https://vercel.com) → Import Project
-3. Selectează repo-ul
-4. Framework Preset: **Other** (site static)
-5. Root Directory: `/` (sau folderul dacă ai subfoldere)
-6. Click Deploy
+### Option 1 — via Vercel dashboard (easiest)
 
-## Conectare domeniu verumsell.com
+1. Push this folder to a GitHub repo.
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repo.
+3. Vercel auto-detects Next.js. Just click **Deploy**.
+4. After deploy, go to **Settings → Domains** in the project and add `verumsell.com`.
+5. Vercel will give you DNS records to add at your domain registrar.
 
-1. În Vercel → Settings → Domains
-2. Adaugă `verumsell.com` și `www.verumsell.com`
-3. Vercel îți dă recorduri DNS (A și CNAME)
-4. Mergi în Wix → Manage Domain → Advanced DNS
-5. Șterge recordurile A și CNAME existente
-6. Adaugă recordurile de la Vercel
-7. Propagare: 24-48h (de obicei mult mai rapid)
+### Option 2 — via Vercel CLI
 
-## Pagini
+```bash
+npm i -g vercel
+vercel
+# follow prompts; when asked, link to a new project
+vercel --prod
+```
 
-- `/` — Landing page cu toate produsele
-- `/pages/capacitate` — Pagina dedicată aplicației de Capacitate
+### DNS for verumsell.com
 
-## În viitor (când mai adaugi produse)
+At your domain registrar, set:
 
-- Copiază `pages/capacitate.html` ca template pentru Bacalaureat
-- Adaugă link-ul în `index.html` în grid-ul de produse
-- Actualizează `products-grid` din `index.html`
+- **A record:** `@` → `76.76.21.21`
+- **CNAME record:** `www` → `cname.vercel-dns.com`
+
+Or transfer nameservers to Vercel (simpler but less flexible).
+
+### Sub-domains for the apps
+
+Each Vercel project can claim its own subdomain. For example:
+
+- `homeopathy.verumsell.com` → Remedium project
+- `studiu.verumsell.com` → Studiu EN26 project
+- `splitornot.verumsell.com` → SplitOrNot project (or keep splitornot.com)
+- `animamundi.verumsell.com` → Anima Mundi project
+
+In each app's Vercel project, go to **Settings → Domains** and add the subdomain. The DNS auto-resolves once `verumsell.com` is on Vercel.
+
+## Editing content
+
+All product data lives in `lib/products.ts`. To add a new product:
+
+1. Add a new entry to the `PRODUCTS` array.
+2. The home page, work page, sub-brand pages, and individual product page all auto-update.
+
+To change the live URLs of each app, set the `url` field on each product.
+
+## Notes on the design
+
+- The aesthetic is **editorial studio** — black on warm ivory, oversized Fraunces serif, mono accents.
+- The geometric horizontal bars throughout reference the Verumsell logo.
+- Each product carries its own colour identity (Remedium sage, Studiu red/blue, CoupleIQ coral, Anima Mundi violet) — these come through on category and detail pages without breaking the master brand.
+- Sub-brands (CoupleIQ, Anima Mundi) get their own takeover pages with full palette inversion.
