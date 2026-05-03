@@ -22,32 +22,17 @@ export default function WorkPage() {
         </div>
         <h1
           className="display fade-up d2"
-          style={{
-            fontSize: "clamp(56px, 9vw, 144px)",
-            fontWeight: 300,
-            marginBottom: 40,
-          }}
+          style={{ fontSize: "clamp(44px, 9vw, 144px)", fontWeight: 300, marginBottom: 40 }}
         >
           The work,
           <br />
-          <em
-            style={{
-              fontStyle: "italic",
-              fontWeight: 500,
-              fontVariationSettings: "'opsz' 144, 'wght' 500",
-            }}
-          >
+          <em style={{ fontStyle: "italic", fontWeight: 500, fontVariationSettings: "'opsz' 144, 'wght' 500" }}>
             organised.
           </em>
         </h1>
         <p
           className="fade-up d3"
-          style={{
-            fontSize: 19,
-            lineHeight: 1.65,
-            color: "var(--ink-soft)",
-            maxWidth: 720,
-          }}
+          style={{ fontSize: 19, lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: 720 }}
         >
           Every product Verumsell has shipped or is shipping. Grouped by domain rather than
           chronology — that way, what we do becomes clearer than when we did it.
@@ -68,28 +53,14 @@ export default function WorkPage() {
               borderTop: "1px solid var(--line-soft)",
             }}
           >
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 2.5fr",
-                gap: 80,
-                alignItems: "flex-start",
-              }}
-            >
+            <div className="grid-work-cat">
               <div style={{ position: "sticky", top: 100 }}>
-                <div
-                  className="eyebrow"
-                  style={{ marginBottom: 16, color: "var(--ink-muted)" }}
-                >
+                <div className="eyebrow" style={{ marginBottom: 16, color: "var(--ink-muted)" }}>
                   {String(i + 1).padStart(2, "0")} / Domain
                 </div>
                 <h2
                   className="display"
-                  style={{
-                    fontSize: "clamp(36px, 4vw, 56px)",
-                    lineHeight: 1,
-                    marginBottom: 16,
-                  }}
+                  style={{ fontSize: "clamp(28px, 4vw, 56px)", lineHeight: 1, marginBottom: 16 }}
                 >
                   {cat}
                 </h2>
@@ -134,7 +105,7 @@ export default function WorkPage() {
                       >
                         <h3
                           className="display"
-                          style={{ fontSize: "clamp(32px, 3.5vw, 48px)", lineHeight: 1 }}
+                          style={{ fontSize: "clamp(28px, 3.5vw, 48px)", lineHeight: 1 }}
                         >
                           {p.name}
                         </h3>
@@ -163,6 +134,7 @@ export default function WorkPage() {
                         fontSize: 11,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
+                        whiteSpace: "nowrap",
                       }}
                     >
                       View →
@@ -179,11 +151,7 @@ export default function WorkPage() {
 }
 
 function StatusPill({ status, ink }: { status: string; ink: string }) {
-  const labels: Record<string, string> = {
-    live: "● Live",
-    beta: "○ Beta",
-    "in-development": "◌ In dev",
-  };
+  const labels: Record<string, string> = { live: "● Live", beta: "○ Beta", "in-development": "◌ In dev" };
   return (
     <span
       style={{

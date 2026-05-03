@@ -23,8 +23,8 @@ const POSTS = [
     category: "Education",
   },
   {
-    slug: "remedium-build-notes",
-    title: "Building Remedium: notes on a clinical AI workflow",
+    slug: "vivo-build-notes",
+    title: "Building Vivo: notes on a clinical AI workflow",
     excerpt:
       "Forty years of homeopathic literature, a 35-question intake, and the source-approval model that keeps the AI honest.",
     date: "Coming soon",

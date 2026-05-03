@@ -8,22 +8,18 @@ export default function Footer() {
         zIndex: 2,
         background: "var(--ink)",
         color: "var(--paper)",
-        padding: "80px 32px 40px",
         marginTop: 120,
       }}
     >
-      <div style={{ maxWidth: 1440, margin: "0 auto" }}>
+      <div className="footer-inner" style={{ maxWidth: 1440, margin: "0 auto", padding: "80px 32px 40px" }}>
         <div
+          className="footer-grid"
           style={{
-            display: "grid",
-            gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
-            gap: 48,
             paddingBottom: 64,
             borderBottom: "1px solid #2A2A2A",
           }}
         >
           <div>
-            {/* Logo in footer — inverted to show on dark background */}
             <img
               src="/brand/verumsell-flat.png"
               alt="Verumsell"
@@ -49,7 +45,7 @@ export default function Footer() {
           </FooterCol>
 
           <FooterCol title="Live products">
-            <a href="https://vivo-lilac.vercel.app" target="_blank" rel="noreferrer">Remedium</a>
+            <a href="https://vivo.verumsell.com" target="_blank" rel="noreferrer">Vivo</a>
             <a href="https://en26.verumsell.com" target="_blank" rel="noreferrer">Studiu EN26</a>
             <a href="https://splitornot.com" target="_blank" rel="noreferrer">SplitOrNot</a>
             <a href="https://getexpirationdate.com" target="_blank" rel="noreferrer">Expiration Date</a>
@@ -66,6 +62,7 @@ export default function Footer() {
         </div>
 
         <div
+          className="footer-bottom"
           style={{
             display: "flex",
             justifyContent: "space-between",

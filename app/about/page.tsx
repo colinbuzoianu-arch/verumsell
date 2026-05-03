@@ -332,7 +332,7 @@ export default function AboutPage() {
 const DISCIPLINES = [
   {
     title: "Health & Safety",
-    desc: "Certified professional. The discipline of audit, document, verify. Informs the rigour behind Remedium and shapes how Verumsell handles anything clinical.",
+    desc: "Certified professional. The discipline of audit, document, verify. Informs the rigour behind Vivo and shapes how Verumsell handles anything clinical.",
   },
   {
     title: "Corporate Training",

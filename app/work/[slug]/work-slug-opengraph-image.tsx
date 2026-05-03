@@ -15,7 +15,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
 
   // Background colours per product
   const bgMap: Record<string, [string, string, string]> = {
-    remedium:        ["#E8EDD9", "#DDD3B8", "#1F3A1A"],
+    vivo:            ["#E8EDD9", "#DDD3B8", "#1F3A1A"],
     "studiu-en2026": ["#FCE5E1", "#D6E3EE", "#3A0E07"],
     splitornot:      ["#F5EBD8", "#E8C9BA", "#3A1208"],
     "expiration-date":["#F0DCC8", "#D9A892", "#3A1208"],

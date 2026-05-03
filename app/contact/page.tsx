@@ -164,7 +164,7 @@ const SERVICES = [
   },
   {
     title: "B2B licensing",
-    desc: "Practitioner tiers and white-label arrangements for products like Remedium and Couple Analyzer.",
+    desc: "Practitioner tiers and white-label arrangements for products like Vivo and Couple Analyzer.",
   },
 ];
 

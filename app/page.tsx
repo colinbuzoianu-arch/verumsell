@@ -8,6 +8,7 @@ export default function Home() {
     <>
       {/* ─────────── HERO ─────────── */}
       <section
+        className="section-hero"
         style={{
           minHeight: "100vh",
           padding: "140px 32px 80px",
@@ -28,7 +29,7 @@ export default function Home() {
           <h1
             className="display fade-up d2"
             style={{
-              fontSize: "clamp(56px, 9vw, 144px)",
+              fontSize: "clamp(44px, 9vw, 144px)",
               fontWeight: 300,
               fontVariationSettings: "'opsz' 144, 'wght' 300",
               marginBottom: 40,
@@ -48,14 +49,8 @@ export default function Home() {
           </h1>
 
           <div
-            className="fade-up d3"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 80,
-              maxWidth: 880,
-              marginTop: 56,
-            }}
+            className="grid-2col fade-up d3"
+            style={{ maxWidth: 880, marginTop: 56 }}
           >
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
               Anyone can wrap a chatbot. We build expert systems — homeopathy with vetted materia
@@ -63,19 +58,16 @@ export default function Home() {
               40 years of science.
             </p>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
-              The AI is the delivery layer. The expertise is the product. That's the difference
-              between a wrapper and a tool you'd actually pay for.
+              The AI is the delivery layer. The expertise is the product. That&apos;s the difference
+              between a wrapper and a tool you&apos;d actually pay for.
             </p>
           </div>
         </div>
 
         {/* hero meta strip */}
         <div
-          className="fade-up d5"
+          className="grid-4col fade-up d5"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 32,
             paddingTop: 40,
             borderTop: "1px solid var(--line-soft)",
           }}
@@ -88,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* ─────────── FEATURED WORK ─────────── */}
-      <section style={{ padding: "120px 32px", maxWidth: 1440, margin: "0 auto" }}>
+      <section className="section-work" style={{ padding: "120px 32px", maxWidth: 1440, margin: "0 auto" }}>
         <div
           style={{
             display: "flex",
@@ -105,7 +97,7 @@ export default function Home() {
             </div>
             <h2
               className="display"
-              style={{ fontSize: "clamp(44px, 6vw, 88px)", maxWidth: 820 }}
+              style={{ fontSize: "clamp(36px, 6vw, 88px)", maxWidth: 820 }}
             >
               Live in the world,
               <br />
@@ -136,7 +128,7 @@ export default function Home() {
         </div>
 
         {/* asymmetric featured grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: 24 }}>
+        <div className="grid-12col">
           <FeatureCard product={live[0]} span={7} large />
           <FeatureCard product={live[1]} span={5} />
           <FeatureCard product={live[2]} span={5} />
@@ -147,6 +139,7 @@ export default function Home() {
 
       {/* ─────────── SUB-BRANDS ─────────── */}
       <section
+        className="section-brands"
         style={{
           padding: "120px 32px",
           maxWidth: 1440,
@@ -159,7 +152,7 @@ export default function Home() {
         <h2
           className="display"
           style={{
-            fontSize: "clamp(44px, 6vw, 88px)",
+            fontSize: "clamp(36px, 6vw, 88px)",
             maxWidth: 1000,
             marginBottom: 64,
           }}
@@ -176,7 +169,7 @@ export default function Home() {
           </em>
         </h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+        <div className="grid-2col">
           <SubBrandCard
             name="CoupleIQ"
             description="Relationship apps grounded in real psychology. SplitOrNot and Couple Analyzer — diagnose where things are, surface what's hidden, prescribe what to do."
@@ -195,21 +188,18 @@ export default function Home() {
 
       {/* ─────────── ABOUT TEASER ─────────── */}
       <section
+        className="section-about grid-about"
         style={{
           padding: "120px 32px",
           maxWidth: 1440,
           margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1.2fr",
-          gap: 80,
-          alignItems: "center",
         }}
       >
         <div>
           <div className="eyebrow" style={{ marginBottom: 20 }}>
             <span className="bar" style={{ width: 20, marginRight: 12, height: 2 }} /> 03 / About
           </div>
-          <h2 className="display" style={{ fontSize: "clamp(40px, 5vw, 72px)", marginBottom: 32 }}>
+          <h2 className="display" style={{ fontSize: "clamp(36px, 5vw, 72px)", marginBottom: 32 }}>
             One operator,
             <br />
             <em
@@ -244,8 +234,8 @@ export default function Home() {
             professional, corporate trainer, formally trained actor, and small business owner.
           </p>
           <p style={{ marginBottom: 24 }}>
-            That cross-disciplinary background is the studio's edge. A health and safety background
-            informs Remedium's clinical rigour. Training experience shapes the education products.
+            That cross-disciplinary background is the studio&apos;s edge. A health and safety background
+            informs Vivo&apos;s clinical rigour. Training experience shapes the education products.
             Acting and psychology underpin the relationship work.
           </p>
           <p>The breadth is the feature, not the bug.</p>
@@ -254,6 +244,7 @@ export default function Home() {
 
       {/* ─────────── CTA ─────────── */}
       <section
+        className="section-cta"
         style={{
           padding: "120px 32px",
           maxWidth: 1440,
@@ -266,7 +257,7 @@ export default function Home() {
         </div>
         <h2
           className="display"
-          style={{ fontSize: "clamp(48px, 7vw, 104px)", maxWidth: 1100, margin: "0 auto 48px" }}
+          style={{ fontSize: "clamp(36px, 7vw, 104px)", maxWidth: 1100, margin: "0 auto 48px" }}
         >
           Got an idea that needs
           <em
@@ -306,7 +297,7 @@ function Stat({ n, label }: { n: string; label: string }) {
     <div>
       <div
         className="display"
-        style={{ fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 400, marginBottom: 8 }}
+        style={{ fontSize: "clamp(32px, 5vw, 64px)", fontWeight: 400, marginBottom: 8 }}
       >
         {n}
       </div>
@@ -368,7 +359,7 @@ function FeatureCard({
         <h3
           className="display"
           style={{
-            fontSize: large ? "clamp(48px, 5vw, 80px)" : wide ? "clamp(44px, 5vw, 72px)" : "clamp(36px, 4vw, 56px)",
+            fontSize: large ? "clamp(36px, 5vw, 80px)" : wide ? "clamp(32px, 5vw, 72px)" : "clamp(28px, 4vw, 56px)",
             marginBottom: 16,
             lineHeight: 0.95,
           }}
@@ -472,7 +463,7 @@ function SubBrandCard({
         <h3
           className="display"
           style={{
-            fontSize: "clamp(48px, 5vw, 80px)",
+            fontSize: "clamp(36px, 5vw, 80px)",
             marginBottom: 24,
             lineHeight: 0.95,
             color: dark ? "var(--animamundi-glow)" : accent,

@@ -20,14 +20,14 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
-    slug: "remedium",
-    name: "Remedium",
+    slug: "vivo",
+    name: "Vivo",
     tagline: "AI-guided homeopathic consultation",
     category: "Health & Wellness",
     status: "live",
     year: "2026",
-    url: "https://vivo-lilac.vercel.app",
-    accent: "var(--remedium)",
+    url: "https://vivo.verumsell.com",
+    accent: "var(--vivo)",
     accentInk: "#1F3A1A",
     background: "linear-gradient(135deg, #E8EDD9 0%, #DDD3B8 100%)",
     description:

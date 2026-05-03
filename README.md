@@ -79,7 +79,7 @@ Or transfer nameservers to Vercel (simpler but less flexible).
 
 Each Vercel project can claim its own subdomain. For example:
 
-- `homeopathy.verumsell.com` → Remedium project
+- `homeopathy.verumsell.com` → Vivo project
 - `studiu.verumsell.com` → Studiu EN26 project
 - `splitornot.verumsell.com` → SplitOrNot project (or keep splitornot.com)
 - `animamundi.verumsell.com` → Anima Mundi project
@@ -99,5 +99,5 @@ To change the live URLs of each app, set the `url` field on each product.
 
 - The aesthetic is **editorial studio** — black on warm ivory, oversized Fraunces serif, mono accents.
 - The geometric horizontal bars throughout reference the Verumsell logo.
-- Each product carries its own colour identity (Remedium sage, Studiu red/blue, CoupleIQ coral, Anima Mundi violet) — these come through on category and detail pages without breaking the master brand.
+- Each product carries its own colour identity (Vivo sage, Studiu red/blue, CoupleIQ coral, Anima Mundi violet) — these come through on category and detail pages without breaking the master brand.
 - Sub-brands (CoupleIQ, Anima Mundi) get their own takeover pages with full palette inversion.
