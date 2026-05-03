@@ -13,6 +13,7 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* ── HERO ── */}
       <section
         style={{
           padding: "160px 32px 80px",
@@ -26,16 +27,16 @@ export default function ContactPage() {
         <h1
           className="display"
           style={{
-            fontSize: "clamp(56px, 9vw, 144px)",
+            fontSize: "clamp(44px, 9vw, 144px)",
             fontWeight: 300,
             marginBottom: 40,
           }}
         >
-          Let's talk.
+          Let&apos;s talk.
         </h1>
         <p
           style={{
-            fontSize: 22,
+            fontSize: "clamp(17px, 2vw, 22px)",
             lineHeight: 1.6,
             color: "var(--ink-soft)",
             maxWidth: 720,
@@ -46,31 +47,30 @@ export default function ContactPage() {
         </p>
       </section>
 
-      {/* contact grid */}
+      {/* ── CONTACT CARDS ── */}
       <section
         style={{
-          padding: "80px 32px",
+          padding: "0 32px 80px",
           maxWidth: 1440,
           margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 16,
         }}
       >
-        <ContactCard
-          label="Email"
-          value="colinbuzoianu@verumsell.com"
-          onCopy={() => copy("colinbuzoianu@verumsell.com")}
-          large
-        />
-        <ContactCard
-          label="Location"
-          value="Timișoara, Romania"
-          subtitle="Remote-first · Operating in EU and US time zones"
-        />
+        <div className="grid-contact-cards">
+          <ContactCard
+            label="Email"
+            value="colinbuzoianu@verumsell.com"
+            onCopy={() => copy("colinbuzoianu@verumsell.com")}
+            large
+          />
+          <ContactCard
+            label="Location"
+            value="Timișoara, Romania"
+            subtitle="Remote-first · Operating in EU and US time zones"
+          />
+        </div>
       </section>
 
-      {/* what we take on */}
+      {/* ── WHAT WE TAKE ON ── */}
       <section
         style={{
           padding: "100px 32px",
@@ -79,25 +79,17 @@ export default function ContactPage() {
           borderTop: "1px solid var(--line-soft)",
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 2fr",
-            gap: 80,
-            marginBottom: 48,
-          }}
-        >
+        <div className="grid-contact-header">
           <div>
-            <div className="eyebrow" style={{ marginBottom: 16 }}>
-              What we take on
-            </div>
+            <div className="eyebrow" style={{ marginBottom: 16 }}>What we take on</div>
           </div>
-          <div style={{ fontSize: 19, lineHeight: 1.65, color: "var(--ink-soft)" }}>
+          <div style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.65, color: "var(--ink-soft)" }}>
             Verumsell is small by design. We work on a few projects a year — the ones where the
-            problem actually matches the studio's edge.
+            problem actually matches the studio&apos;s edge.
           </div>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+
+        <div className="grid-services">
           {SERVICES.map((s, i) => (
             <div
               key={s.title}
@@ -120,7 +112,10 @@ export default function ContactPage() {
               >
                 {String(i + 1).padStart(2, "0")} / Service
               </div>
-              <h4 className="display" style={{ fontSize: 28, marginBottom: 12, lineHeight: 1.05 }}>
+              <h4
+                className="display"
+                style={{ fontSize: "clamp(22px, 2.5vw, 28px)", marginBottom: 12, lineHeight: 1.05 }}
+              >
                 {s.title}
               </h4>
               <p style={{ fontSize: 14, lineHeight: 1.55, color: "var(--ink-soft)" }}>{s.desc}</p>
@@ -129,6 +124,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* ── COPIED TOAST ── */}
       {copied && (
         <div
           style={{
@@ -211,23 +207,16 @@ function ContactCard({
         <div
           className="display"
           style={{
-            fontSize: large ? "clamp(32px, 4vw, 56px)" : "clamp(28px, 3vw, 40px)",
+            fontSize: large ? "clamp(24px, 4vw, 56px)" : "clamp(22px, 3vw, 40px)",
             lineHeight: 1.05,
             marginBottom: subtitle ? 12 : 0,
+            wordBreak: "break-word",
           }}
         >
           {value}
         </div>
         {subtitle && (
-          <p
-            style={{
-              fontSize: 14,
-              opacity: 0.7,
-              marginTop: 8,
-            }}
-          >
-            {subtitle}
-          </p>
+          <p style={{ fontSize: 14, opacity: 0.7, marginTop: 8 }}>{subtitle}</p>
         )}
         {onCopy && (
           <div

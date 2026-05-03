@@ -35,6 +35,7 @@ const POSTS = [
 export default function JournalPage() {
   return (
     <>
+      {/* ── HERO ── */}
       <section
         style={{
           padding: "160px 32px 80px",
@@ -49,7 +50,7 @@ export default function JournalPage() {
         <h1
           className="display"
           style={{
-            fontSize: "clamp(56px, 9vw, 144px)",
+            fontSize: "clamp(44px, 9vw, 144px)",
             fontWeight: 300,
             marginBottom: 40,
           }}
@@ -68,17 +69,18 @@ export default function JournalPage() {
         </h1>
         <p
           style={{
-            fontSize: 19,
+            fontSize: "clamp(16px, 1.8vw, 19px)",
             lineHeight: 1.65,
             color: "var(--ink-soft)",
             maxWidth: 720,
           }}
         >
-          Build notes, product thinking, and the occasional rant about why most AI products don't
-          actually work. New entries land when there's something worth saying.
+          Build notes, product thinking, and the occasional rant about why most AI products
+          don&apos;t actually work. New entries land when there&apos;s something worth saying.
         </p>
       </section>
 
+      {/* ── POST LIST ── */}
       <section
         style={{
           padding: "80px 32px",
@@ -90,16 +92,14 @@ export default function JournalPage() {
           {POSTS.map((p, i) => (
             <article
               key={p.slug}
+              className="grid-journal-row"
               style={{
                 padding: "48px 0",
                 borderTop: "1px solid var(--line-soft)",
                 borderBottom: i === POSTS.length - 1 ? "1px solid var(--line-soft)" : "none",
-                display: "grid",
-                gridTemplateColumns: "1fr 3fr 1fr",
-                gap: 48,
-                alignItems: "flex-start",
               }}
             >
+              {/* category label */}
               <div
                 style={{
                   fontFamily: "var(--font-mono)",
@@ -107,15 +107,18 @@ export default function JournalPage() {
                   letterSpacing: "0.14em",
                   color: "var(--ink-muted)",
                   textTransform: "uppercase",
+                  paddingTop: 6,
                 }}
               >
                 {p.category}
               </div>
+
+              {/* title + excerpt — now the wide centre column */}
               <div>
                 <h2
                   className="display"
                   style={{
-                    fontSize: "clamp(32px, 3.5vw, 48px)",
+                    fontSize: "clamp(28px, 3.5vw, 48px)",
                     lineHeight: 1.05,
                     marginBottom: 16,
                   }}
@@ -124,16 +127,18 @@ export default function JournalPage() {
                 </h2>
                 <p
                   style={{
-                    fontSize: 17,
-                    lineHeight: 1.6,
+                    fontSize: "clamp(15px, 1.6vw, 17px)",
+                    lineHeight: 1.65,
                     color: "var(--ink-soft)",
-                    maxWidth: 600,
                   }}
                 >
                   {p.excerpt}
                 </p>
               </div>
+
+              {/* date — right-aligned on desktop, left on mobile */}
               <div
+                className="journal-date"
                 style={{
                   fontFamily: "var(--font-mono)",
                   fontSize: 11,
@@ -141,6 +146,7 @@ export default function JournalPage() {
                   color: "var(--ink-muted)",
                   textTransform: "uppercase",
                   textAlign: "right",
+                  paddingTop: 6,
                 }}
               >
                 {p.date}
@@ -148,6 +154,55 @@ export default function JournalPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      {/* ── SUBSCRIBE / CTA ── */}
+      <section
+        style={{
+          padding: "100px 32px",
+          maxWidth: 1440,
+          margin: "0 auto",
+          borderTop: "1px solid var(--line-soft)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 32,
+        }}
+      >
+        <div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>Stay in the loop</div>
+          <h3
+            className="display"
+            style={{ fontSize: "clamp(28px, 4vw, 56px)", lineHeight: 1.05 }}
+          >
+            Worth following,
+            <em
+              style={{
+                fontStyle: "italic",
+                fontWeight: 500,
+                fontVariationSettings: "'opsz' 144, 'wght' 500",
+              }}
+            >
+              {" "}if you build things.
+            </em>
+          </h3>
+        </div>
+        <Link
+          href="/contact"
+          style={{
+            display: "inline-block",
+            padding: "18px 32px",
+            border: "1px solid var(--ink)",
+            fontFamily: "var(--font-mono)",
+            fontSize: 12,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Get in touch →
+        </Link>
       </section>
     </>
   );
