@@ -72,7 +72,7 @@ export default function Home() {
             borderTop: "1px solid var(--line-soft)",
           }}
         >
-          <Stat n="04" label="Live products" />
+          <Stat n="05" label="Live products" />
           <Stat n="02" label="Sub-brands" />
           <Stat n="02" label="In development" />
           <Stat n="01" label="Operator" />
@@ -177,11 +177,12 @@ export default function Home() {
             href="/work/coupleiq"
           />
           <SubBrandCard
-            name="Anima Mundi"
-            description="Spiritual guidance through six archetypal voices. A contemplative companion for the questions search engines can't answer."
-            accent="var(--animamundi)"
-            href="/work/anima-mundi"
-            dark
+            name="Buzomed"
+            description="Occupational medicine practice management for Romanian clinics, expanding to DACH. Multi-tenant SaaS for the day-to-day of medicina muncii — companies, employees, examinations, reports."
+            accent="var(--buzomed)"
+            href="/work/buzomed"
+            darkBg="var(--buzomed)"
+            darkGlow="var(--buzomed-teal)"
           />
         </div>
       </section>
@@ -424,19 +425,22 @@ function SubBrandCard({
   description,
   accent,
   href,
-  dark,
+  darkBg,
+  darkGlow,
 }: {
   name: string;
   description: string;
   accent: string;
   href: string;
-  dark?: boolean;
+  darkBg?: string;
+  darkGlow?: string;
 }) {
+  const dark = Boolean(darkBg);
   return (
     <Link
       href={href}
       style={{
-        background: dark ? "var(--animamundi)" : "var(--coupleiq-cream)",
+        background: dark ? darkBg : "var(--coupleiq-cream)",
         color: dark ? "var(--paper)" : "var(--coupleiq)",
         padding: "64px 48px",
         minHeight: 380,
@@ -466,7 +470,7 @@ function SubBrandCard({
             fontSize: "clamp(36px, 5vw, 80px)",
             marginBottom: 24,
             lineHeight: 0.95,
-            color: dark ? "var(--animamundi-glow)" : accent,
+            color: dark ? darkGlow : accent,
           }}
         >
           {name}
@@ -475,7 +479,7 @@ function SubBrandCard({
           style={{
             fontSize: 17,
             lineHeight: 1.6,
-            color: dark ? "rgba(242, 239, 233, 0.85)" : "rgba(58, 18, 8, 0.85)",
+            color: dark ? "rgba(242, 239, 233, 0.9)" : "rgba(58, 18, 8, 0.85)",
             maxWidth: 460,
           }}
         >

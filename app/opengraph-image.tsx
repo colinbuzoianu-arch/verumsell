@@ -74,7 +74,7 @@ export default async function Image() {
             verumsell.com
           </div>
           <div style={{ display: "flex", gap: 32 }}>
-            {["Health", "Education", "Relationships", "Spirituality", "Sales"].map((cat) => (
+            {["Health", "Occupational", "Education", "Relationships", "Sales"].map((cat) => (
               <div key={cat} style={{ fontSize: 13, color: "#6B6660", letterSpacing: 1, textTransform: "uppercase", fontFamily: "monospace" }}>
                 {cat}
               </div>

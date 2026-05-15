@@ -19,7 +19,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
     "studiu-en2026": ["#FCE5E1", "#D6E3EE", "#3A0E07"],
     splitornot:      ["#F5EBD8", "#E8C9BA", "#3A1208"],
     "expiration-date":["#F0DCC8", "#D9A892", "#3A1208"],
-    "anima-mundi":   ["#2A1F4A", "#4A3A6E", "#E8D8A8"],
+    "buzomed":       ["#DCEAF5", "#B8D8DA", "#0A1F3A"],
     "studiu-bac":    ["#D6E3EE", "#A8C5D9", "#0A1F2E"],
     "sales-trainer": ["#D6E0DA", "#A8B8B0", "#0F1F1A"],
   };

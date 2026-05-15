@@ -49,12 +49,12 @@ export default function Footer() {
             <a href="https://en26.verumsell.com" target="_blank" rel="noreferrer">Studiu EN26</a>
             <a href="https://splitornot.com" target="_blank" rel="noreferrer">SplitOrNot</a>
             <a href="https://getexpirationdate.com" target="_blank" rel="noreferrer">Expiration Date</a>
-            <a href="https://project-qdb1y.vercel.app" target="_blank" rel="noreferrer">Anima Mundi</a>
+            <a href="https://buzomed.com" target="_blank" rel="noreferrer">Buzomed</a>
           </FooterCol>
 
           <FooterCol title="Sub-brands">
             <Link href="/work/coupleiq">CoupleIQ</Link>
-            <Link href="/work/anima-mundi">Anima Mundi</Link>
+            <Link href="/work/buzomed">Buzomed</Link>
             <a href="mailto:colinbuzoianu@verumsell.com" style={{ marginTop: 16, display: "block", color: "#9C968B", fontSize: 13 }}>
               colinbuzoianu@verumsell.com
             </a>

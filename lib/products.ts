@@ -4,11 +4,11 @@ export interface Product {
   slug: string;
   name: string;
   tagline: string;
-  category: "Health & Wellness" | "Education" | "Relationships" | "Spirituality" | "Sales & Training";
+  category: "Health & Wellness" | "Education" | "Relationships" | "Sales & Training" | "Occupational Health";
   status: Status;
   year: string;
   url?: string;
-  subBrand?: "CoupleIQ" | "Anima Mundi";
+  subBrand?: "CoupleIQ" | "Buzomed";
   accent: string;
   accentInk: string;
   background: string;
@@ -114,30 +114,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "anima-mundi",
-    name: "Anima Mundi",
-    tagline: "AI-powered spiritual guidance",
-    category: "Spirituality",
-    status: "beta",
-    year: "2026",
-    url: "https://project-qdb1y.vercel.app",
-    subBrand: "Anima Mundi",
-    accent: "var(--animamundi)",
-    accentInk: "#E8D8A8",
-    background: "linear-gradient(135deg, #2A1F4A 0%, #4A3A6E 100%)",
-    description:
-      "Six archetypal guides. Voice in, voice out. A different kind of conversation about meaning, direction, and the questions that don't have search-engine answers.",
-    expertLayer:
-      "Six distinct archetypal personas — each a different lens on the same question. Voice I/O for a conversation that feels less like a chatbot and more like consultation.",
-    audience: "Anyone navigating questions of meaning, transition, or inner direction.",
-    highlights: [
-      "Six archetypal avatar personas",
-      "Voice input and voice output (full conversation, not text)",
-      "Live at a Vercel deployment with serverless API",
-      "GA4 analytics, custom domain options",
-    ],
-  },
-  {
     slug: "studiu-bac",
     name: "Studiu BAC",
     tagline: "Bacalaureat preparation",
@@ -179,13 +155,37 @@ export const PRODUCTS: Product[] = [
       "B2B tier for sales teams",
     ],
   },
+  {
+    slug: "buzomed",
+    name: "Buzomed",
+    tagline: "Occupational medicine, modernised",
+    category: "Occupational Health",
+    status: "live",
+    year: "2026",
+    url: "https://buzomed.com",
+    subBrand: "Buzomed",
+    accent: "var(--buzomed)",
+    accentInk: "#0A1F3A",
+    background: "linear-gradient(135deg, #DCEAF5 0%, #B8D8DA 100%)",
+    description:
+      "A multi-tenant SaaS for occupational medicine practices. Patient records, company contracts, scheduled examinations, and regulatory reporting — built for the workflow Romanian medicina muncii actually runs on, with a clear path to DACH.",
+    expertLayer:
+      "Built around the real operational shape of an occupational medicine practice: companies as customers, employees as patients, role-based examinations, and the regulatory paperwork that has to come out the other end. Row-level security from day one, so multi-tenant means properly isolated.",
+    audience: "Occupational medicine practitioners and clinics in Romania, expanding to Germany and the wider DACH region.",
+    highlights: [
+      "Multi-tenant practice management with full data isolation (RLS)",
+      "Companies, employees, and scheduled examinations — the actual unit of work",
+      "Bilingual RO / EN from the start, German next",
+      "Invitation-based onboarding with role-based access (super_admin, practice_admin, practitioner, assistant)",
+    ],
+  },
 ];
 
 export const CATEGORIES = [
   "Health & Wellness",
+  "Occupational Health",
   "Education",
   "Relationships",
-  "Spirituality",
   "Sales & Training",
 ] as const;
 
@@ -197,6 +197,6 @@ export function byCategory(cat: string): Product[] {
   return PRODUCTS.filter((p) => p.category === cat);
 }
 
-export function bySubBrand(brand: "CoupleIQ" | "Anima Mundi"): Product[] {
+export function bySubBrand(brand: "CoupleIQ" | "Buzomed"): Product[] {
   return PRODUCTS.filter((p) => p.subBrand === brand);
 }

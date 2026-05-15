@@ -255,7 +255,7 @@ const DISCIPLINES = [
   },
   {
     title: "Acting (formal training)",
-    desc: "Presence, persona, voice. What gives the Anima Mundi archetypes their distinctness, and what shapes how every product on this site sounds.",
+    desc: "Presence, persona, voice. What shapes how every product on this site sounds — from a tutor's tone to a clinician's bedside manner.",
   },
   {
     title: "Service Management",
