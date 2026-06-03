@@ -20,6 +20,38 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   {
+    slug: "buzomed",
+    name: "Buzomed",
+    tagline: "Occupational medicine, modernised",
+    category: "Occupational Health",
+    status: "live",
+    year: "2026",
+    url: "https://buzomed.com",
+    subBrand: "Buzomed",
+    accent: "var(--buzomed)",
+    accentInk: "#0A1F3A",
+    background: "linear-gradient(135deg, #DCEAF5 0%, #B8D8DA 100%)",
+    description:
+      "A multi-tenant SaaS for occupational medicine practices. Patient records, company contracts, scheduled examinations, signed fișe de aptitudine, vaccination tracking, and regulatory reporting — built for the workflow Romanian medicina muncii actually runs on, with a clear path to DACH.",
+    expertLayer:
+      "Built around the real operational shape of an occupational medicine practice: companies as customers, employees as patients, role-based examinations, and the regulatory paperwork that has to come out the other end. AES-256-GCM encrypted CNP storage, row-level security, and full audit logging — GDPR-grade from day one.",
+    audience: "Occupational medicine practitioners and clinics in Romania, expanding to Germany and the wider DACH region.",
+    highlights: [
+      "Multi-tenant practice management with full data isolation (Supabase RLS)",
+      "Complete examination workflow: schedule → conduct → verdict → signed fișă de aptitudine",
+      "AES-256-GCM encrypted CNP with per-tenant salt — GDPR-grade from day one",
+      "Bulk employee import from CSV/Excel with fuzzy Romanian address parsing",
+      "Automated recall system: overdue and upcoming examination alerts",
+      "Workplace risk profiles keyed to CAEN hazard categories (physical, chemical, biological, ergonomic, psychosocial)",
+      "Contract and invoice management per client company",
+      "Vaccination tracking with administration route and lot number",
+      "Reports dashboard: examination volumes, expiration forecasts, practitioner workload",
+      "Full audit log and document archive per employee/examination",
+      "Role-based access: practice_admin, practitioner, assistant, company_hr",
+      "Stripe subscription billing with tiered pricing by active employee count",
+    ],
+  },
+  {
     slug: "vivo",
     name: "Vivo",
     tagline: "AI-guided homeopathic consultation",
@@ -153,30 +185,6 @@ export const PRODUCTS: Product[] = [
       "Feedback grounded in proven methodology",
       "Scenario library: cold outreach, objection handling, negotiation, closing",
       "B2B tier for sales teams",
-    ],
-  },
-  {
-    slug: "buzomed",
-    name: "Buzomed",
-    tagline: "Occupational medicine, modernised",
-    category: "Occupational Health",
-    status: "live",
-    year: "2026",
-    url: "https://buzomed.com",
-    subBrand: "Buzomed",
-    accent: "var(--buzomed)",
-    accentInk: "#0A1F3A",
-    background: "linear-gradient(135deg, #DCEAF5 0%, #B8D8DA 100%)",
-    description:
-      "A multi-tenant SaaS for occupational medicine practices. Patient records, company contracts, scheduled examinations, and regulatory reporting — built for the workflow Romanian medicina muncii actually runs on, with a clear path to DACH.",
-    expertLayer:
-      "Built around the real operational shape of an occupational medicine practice: companies as customers, employees as patients, role-based examinations, and the regulatory paperwork that has to come out the other end. Row-level security from day one, so multi-tenant means properly isolated.",
-    audience: "Occupational medicine practitioners and clinics in Romania, expanding to Germany and the wider DACH region.",
-    highlights: [
-      "Multi-tenant practice management with full data isolation (RLS)",
-      "Companies, employees, and scheduled examinations — the actual unit of work",
-      "Bilingual RO / EN from the start, German next",
-      "Invitation-based onboarding with role-based access (super_admin, practice_admin, practitioner, assistant)",
     ],
   },
 ];
