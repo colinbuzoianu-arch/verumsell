@@ -8,7 +8,7 @@ export interface Product {
   status: Status;
   year: string;
   url?: string;
-  subBrand?: "CoupleIQ" | "Buzomed";
+  subBrand?: "CoupleIQ" | "Buzomed" | "Anima Mundi";
   accent: string;
   accentInk: string;
   background: string;
@@ -205,6 +205,6 @@ export function byCategory(cat: string): Product[] {
   return PRODUCTS.filter((p) => p.category === cat);
 }
 
-export function bySubBrand(brand: "CoupleIQ" | "Buzomed"): Product[] {
+export function bySubBrand(brand: "CoupleIQ" | "Buzomed" | "Anima Mundi"): Product[] {
   return PRODUCTS.filter((p) => p.subBrand === brand);
 }
