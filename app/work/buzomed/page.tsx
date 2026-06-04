@@ -79,7 +79,7 @@ export default function BuzomedPage() {
                 opacity: 0.7,
               }}
             >
-              ↳ Part of Buzomed
+              ↳ Part of Verumsell
             </span>
           </div>
 
