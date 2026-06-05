@@ -39,7 +39,7 @@ const T = {
     s04_body1:
       "Firmele sunt unitatea de facturare. Fiecare firmă poate avea mai multe locuri de muncă, iar fiecare loc de muncă poartă un profil de risc (factori fizici, chimici, biologici, ergonomici, psihosociali) cu sugestii automate pe baza codului CAEN. Angajații sunt atribuiți locurilor de muncă — iar această atribuire, cu data de început și motivul, determină tipul de examinare și programarea.",
     s04_body2:
-      "Importul în masă acceptă fișiere CSV sau Excel cu detectare fuzzy a antetelor — cabinetul poate lipi exportul HR existent, iar importatorul determină ce înseamnă fiecare coloană, inclusiv parsarea adreselor românești și a numelor de coloane ambigue precum „nume" (care poate însemna nume complet sau prenume, în funcție de context).",
+      "Importul în masă acceptă fișiere CSV sau Excel cu detectare fuzzy a antetelor — cabinetul poate lipi exportul HR existent, iar importatorul determină ce înseamnă fiecare coloană, inclusiv parsarea adreselor românești și a numelor de coloane ambigue precum \"nume\" (care poate însemna nume complet sau prenume, în funcție de context).",
     s04_body3:
       "Angajații pot fi arhivați (au plecat din firmă, transferați, pensionați) în loc să fie șterși, păstrând istoricul medical. CNP-ul este afișat la cerere printr-o acțiune dedicată de dezvăluire, nu în listele generale.",
 
