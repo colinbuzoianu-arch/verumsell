@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CookieSettingsButton from "./CookieSettingsButton";
 
 export default function Footer() {
   return (
@@ -59,6 +60,13 @@ export default function Footer() {
               colinbuzoianu@verumsell.com
             </a>
           </FooterCol>
+
+          <FooterCol title="Legal">
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/cookies">Cookie Policy</Link>
+            <Link href="/terms">Terms of Use</Link>
+            <CookieSettingsButton />
+          </FooterCol>
         </div>
 
         <div
@@ -77,7 +85,7 @@ export default function Footer() {
             gap: 16,
           }}
         >
-          <span>© {new Date().getFullYear()} Verumsell — All rights reserved</span>
+          <span>© {new Date().getFullYear()} Verumsell SRL — All rights reserved</span>
           <span>Built in Timișoara · Deployed on Vercel</span>
         </div>
       </div>

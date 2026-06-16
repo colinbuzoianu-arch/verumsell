@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Analytics from "../components/Analytics";
+import CookieConsent from "../components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Verumsell — AI-powered apps built on real expertise",
@@ -26,19 +28,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-            <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ECZX9M80RG" />
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-ECZX9M80RG');
-        `}} />
-      </head>
       <body>
+        {/* Google Analytics is only ever injected client-side, and only once
+            the visitor has opted in via the cookie banner. Nothing is
+            requested from Google before that. See components/Analytics.tsx
+            and lib/consent.ts. */}
+        <Analytics />
         <Nav />
         <main style={{ position: "relative", zIndex: 2 }}>{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
