@@ -54,12 +54,14 @@ export default function Home() {
           >
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
               Anyone can wrap a chatbot. We build expert systems — homeopathy with vetted materia
-              medica, exam prep mapped to the official curriculum, relationship analysis grounded in
-              40 years of science.
+              medica, occupational medicine software for the workflow Romanian clinics actually run
+              on (Buzomed), AI governance analysis grounded in EU law (WLS), exam prep mapped to the
+              official curriculum, relationship analysis backed by 40 years of science.
             </p>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
-              The AI is the delivery layer. The expertise is the product. That&apos;s the difference
-              between a wrapper and a tool you&apos;d actually pay for.
+              The AI is the delivery layer. The expertise is the product — years of health &amp;
+              safety consultancy, corporate training, and regulatory practice behind every product.
+              That&apos;s the difference between a wrapper and a tool you&apos;d actually pay for.
             </p>
           </div>
         </div>
