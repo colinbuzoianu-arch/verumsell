@@ -6,7 +6,7 @@ export const metadata = {
   description: "AI-powered spiritual guidance through six archetypal voices.",
 };
 
-const ANIMA_URL = "https://project-qdb1y.vercel.app";
+const ANIMA_URL = "https://animamundi.verumsell.com";
 
 export default function AnimaMundiPage() {
   const products = bySubBrand("Anima Mundi");

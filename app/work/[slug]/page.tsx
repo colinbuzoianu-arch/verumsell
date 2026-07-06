@@ -4,7 +4,7 @@ import { PRODUCTS, bySlug } from "../../../lib/products";
 
 export function generateStaticParams() {
   return PRODUCTS
-    .filter((p) => p.slug !== "coupleiq" && p.slug !== "buzomed")
+    .filter((p) => p.slug !== "coupleiq" && p.slug !== "buzomed" && p.slug !== "anima-mundi" && !p.external)
     .map((p) => ({ slug: p.slug }));
 }
 
@@ -18,7 +18,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   const p = bySlug(params.slug);
   if (!p) notFound();
 
-  const others = PRODUCTS.filter((x) => x.slug !== p.slug).slice(0, 3);
+  const others = PRODUCTS.filter((x) => x.slug !== p.slug && !x.external).slice(0, 3);
 
   return (
     <>

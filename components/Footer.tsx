@@ -46,11 +46,12 @@ export default function Footer() {
           </FooterCol>
 
           <FooterCol title="Live products">
+            <a href="https://buzomed.com" target="_blank" rel="noreferrer">Buzomed</a>
+            <a href="https://worldlegalservice.com" target="_blank" rel="noreferrer">WLS — World Legal Services</a>
             <a href="https://vivo.verumsell.com" target="_blank" rel="noreferrer">Vivo</a>
             <a href="https://en26.verumsell.com" target="_blank" rel="noreferrer">Studiu EN26</a>
             <a href="https://splitornot.com" target="_blank" rel="noreferrer">SplitOrNot</a>
-            <a href="https://getexpirationdate.com" target="_blank" rel="noreferrer">Expiration Date</a>
-            <a href="https://buzomed.com" target="_blank" rel="noreferrer">Buzomed</a>
+            <a href="https://animamundi.verumsell.com" target="_blank" rel="noreferrer">Anima Mundi</a>
           </FooterCol>
 
           <FooterCol title="Sub-brands">

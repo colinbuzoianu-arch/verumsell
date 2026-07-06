@@ -78,21 +78,20 @@ export default function WorkPage() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                {items.map((p) => (
-                  <Link
-                    key={p.slug}
-                    href={`/work/${p.slug}`}
-                    style={{
-                      background: p.background,
-                      color: p.accentInk,
-                      padding: "40px 40px",
-                      display: "grid",
-                      gridTemplateColumns: "1fr auto",
-                      gap: 32,
-                      alignItems: "center",
-                      transition: "transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)",
-                    }}
-                  >
+                {items.map((p) => {
+                  const external = Boolean(p.external && p.url);
+                  const rowStyle: React.CSSProperties = {
+                    background: p.background,
+                    color: p.accentInk,
+                    padding: "40px 40px",
+                    display: "grid",
+                    gridTemplateColumns: "1fr auto",
+                    gap: 32,
+                    alignItems: "center",
+                    transition: "transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)",
+                  };
+                  const row = (
+                    <>
                     <div>
                       <div
                         style={{
@@ -137,10 +136,20 @@ export default function WorkPage() {
                         whiteSpace: "nowrap",
                       }}
                     >
-                      View →
+                      {external ? "Visit →" : "View →"}
                     </div>
-                  </Link>
-                ))}
+                    </>
+                  );
+                  return external ? (
+                    <a key={p.slug} href={p.url} target="_blank" rel="noreferrer" style={rowStyle}>
+                      {row}
+                    </a>
+                  ) : (
+                    <Link key={p.slug} href={`/work/${p.slug}`} style={rowStyle}>
+                      {row}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </section>

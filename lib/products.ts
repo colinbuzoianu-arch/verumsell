@@ -4,10 +4,14 @@ export interface Product {
   slug: string;
   name: string;
   tagline: string;
-  category: "Health & Wellness" | "Education" | "Relationships" | "Sales & Training" | "Occupational Health";
+  category: "Health & Wellness" | "Education" | "Relationships" | "Sales & Training" | "Occupational Health" | "AI Governance";
   status: Status;
   year: string;
   url?: string;
+  /** When true, cards link directly to `url` instead of an internal case page. */
+  external?: boolean;
+  /** Optional brand mark rendered as a watermark on feature cards. */
+  logo?: string;
   subBrand?: "CoupleIQ" | "Buzomed" | "Anima Mundi";
   accent: string;
   accentInk: string;
@@ -49,6 +53,31 @@ export const PRODUCTS: Product[] = [
       "Full audit log and document archive per employee/examination",
       "Role-based access: practice_admin, practitioner, assistant, company_hr",
       "Stripe subscription billing with tiered pricing by active employee count",
+    ],
+  },
+  {
+    slug: "wls",
+    name: "WLS",
+    tagline: "Rethinking the rules that govern us",
+    category: "AI Governance",
+    status: "live",
+    year: "2026",
+    url: "https://worldlegalservice.com",
+    external: true,
+    logo: "/brand/wls-mark.png",
+    accent: "var(--wls-gold)",
+    accentInk: "#1C1710",
+    background: "linear-gradient(135deg, #FAF8F1 0%, #EDE5CE 100%)",
+    description:
+      "World Legal Services — an independent publication on AI governance. Analysis of the EU AI Act, machine ethics, and the frameworks emerging to govern intelligent systems, published in English, Romanian, and German.",
+    expertLayer:
+      "Written from working knowledge of EU regulatory practice and hands-on AI system development — policy analysis grounded in how these systems are actually built, deployed, and governed.",
+    audience: "Policymakers, compliance professionals, and anyone tracking how AI regulation takes shape in Europe.",
+    highlights: [
+      "Trilingual publication: English, Romanian, German",
+      "Five content pillars covering AI governance end to end",
+      "EU AI Act analysis and institutional mapping",
+      "Briefings format for fast-moving regulatory developments",
     ],
   },
   {
@@ -122,27 +151,27 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "expiration-date",
-    name: "Expiration Date",
-    tagline: "Does your relationship have an end date?",
-    category: "Relationships",
-    status: "live",
-    year: "2026",
-    url: "https://getexpirationdate.com",
-    subBrand: "CoupleIQ",
-    accent: "var(--coupleiq)",
-    accentInk: "#3A1208",
-    background: "linear-gradient(135deg, #F0DCC8 0%, #D9A892 100%)",
+    slug: "anima-mundi",
+    name: "Anima Mundi",
+    tagline: "Spiritual guidance through six archetypal voices",
+    category: "Health & Wellness",
+    status: "beta",
+    year: "2025",
+    url: "https://animamundi.verumsell.com",
+    subBrand: "Anima Mundi",
+    accent: "var(--animamundi-glow)",
+    accentInk: "#E8E2F5",
+    background: "linear-gradient(135deg, #2A1F4A 0%, #15102A 100%)",
     description:
-      "A 5-minute forecast that tells you where your relationship is heading. Punchy, private, and built on the same science therapists use — not vibes.",
+      "An AI spiritual companion that speaks through six archetypal guides — the Sage, the Mystic, the Healer, the Warrior, the Lover, and the Trickster. Reflection, not fortune-telling.",
     expertLayer:
-      "Question set designed against the Gottman Method's predictors, attachment theory, and conflict-pattern research. The AI synthesises a forecast, not a horoscope.",
-    audience: "Couples who feel something is off and want a clear, private read on what.",
+      "Each archetype is grounded in Jungian psychology and classical wisdom traditions, with its own distinct voice, perspective, and way of questioning.",
+    audience: "People seeking a reflective, symbolic space to think through life's questions.",
     highlights: [
-      "5-minute, 15-question diagnostic",
-      "Relationship forecast with risk vectors",
-      "Built on Gottman + attachment + conflict-style frameworks",
-      "Private — no answers stored",
+      "Six distinct archetypal guides, each with its own voice",
+      "Grounded in Jungian archetypes and wisdom traditions",
+      "Conversation as reflection, not prediction",
+      "Live at animamundi.verumsell.com",
     ],
   },
   {
@@ -192,6 +221,7 @@ export const PRODUCTS: Product[] = [
 export const CATEGORIES = [
   "Health & Wellness",
   "Occupational Health",
+  "AI Governance",
   "Education",
   "Relationships",
   "Sales & Training",

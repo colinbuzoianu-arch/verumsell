@@ -72,7 +72,7 @@ export default function Home() {
             borderTop: "1px solid var(--line-soft)",
           }}
         >
-          <Stat n="05" label="Live products" />
+          <Stat n="06" label="Live products" />
           <Stat n="02" label="Sub-brands" />
           <Stat n="02" label="In development" />
           <Stat n="01" label="Operator" />
@@ -133,7 +133,8 @@ export default function Home() {
           <FeatureCard product={live[1]} span={5} />
           <FeatureCard product={live[2]} span={5} />
           <FeatureCard product={live[3]} span={7} large />
-          <FeatureCard product={live[4]} span={12} wide />
+          <FeatureCard product={live[4]} span={7} large />
+          <FeatureCard product={live[5]} span={5} />
         </div>
       </section>
 
@@ -318,24 +319,42 @@ function FeatureCard({
   large?: boolean;
   wide?: boolean;
 }) {
-  return (
-    <Link
-      href={`/work/${product.slug}`}
-      style={{
-        gridColumn: `span ${span}`,
-        background: product.background,
-        color: product.accentInk,
-        padding: large ? "56px 48px" : wide ? "72px 56px" : "40px 36px",
-        minHeight: large ? 480 : wide ? 360 : 360,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        position: "relative",
-        overflow: "hidden",
-        transition: "transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)",
-      }}
-    >
-      <div>
+  const external = Boolean(product.external && product.url);
+
+  const cardStyle: React.CSSProperties = {
+    gridColumn: `span ${span}`,
+    background: product.background,
+    color: product.accentInk,
+    padding: large ? "56px 48px" : wide ? "72px 56px" : "40px 36px",
+    minHeight: large ? 480 : wide ? 360 : 360,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    position: "relative",
+    overflow: "hidden",
+    transition: "transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)",
+  };
+
+  const content = (
+    <>
+      {product.logo && (
+        <img
+          src={product.logo}
+          alt=""
+          aria-hidden
+          style={{
+            position: "absolute",
+            right: -36,
+            bottom: -28,
+            height: large ? 300 : 240,
+            width: "auto",
+            opacity: 0.45,
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+      )}
+      <div style={{ position: "relative", zIndex: 1 }}>
         <div
           style={{
             display: "flex",
@@ -388,11 +407,27 @@ function FeatureCard({
           justifyContent: "space-between",
           alignItems: "center",
           marginTop: 32,
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <span>{product.subBrand ? `↳ ${product.subBrand}` : product.year}</span>
-        <span>View case →</span>
+        <span>{external ? "Visit site →" : "View case →"}</span>
       </div>
+    </>
+  );
+
+  if (external) {
+    return (
+      <a href={product.url} target="_blank" rel="noreferrer" style={cardStyle}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={`/work/${product.slug}`} style={cardStyle}>
+      {content}
     </Link>
   );
 }
