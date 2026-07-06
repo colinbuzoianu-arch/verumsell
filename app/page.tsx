@@ -56,7 +56,7 @@ export default function Home() {
               Anyone can wrap a chatbot. We build expert systems — homeopathy with vetted materia
               medica, occupational medicine software for the workflow Romanian clinics actually run
               on (Buzomed), AI governance analysis grounded in EU law (WLS), exam prep mapped to the
-              official curriculum, relationship analysis backed by 40 years of science.
+              official curriculum.
             </p>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
               The AI is the delivery layer. The expertise is the product — years of health &amp;
