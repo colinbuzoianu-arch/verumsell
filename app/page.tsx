@@ -53,10 +53,10 @@ export default function Home() {
             style={{ maxWidth: 880, marginTop: 56 }}
           >
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
-              Anyone can wrap a chatbot. We build expert systems — homeopathy with vetted materia
-              medica, occupational medicine software for the workflow Romanian clinics actually run
-              on (Buzomed), AI governance analysis grounded in EU law (WLS), exam prep mapped to the
-              official curriculum.
+              Anyone can wrap a chatbot. We build expert systems — occupational medicine software
+              for the workflow Romanian clinics actually run on (Buzomed), AI governance analysis
+              grounded in EU law (WLS), and camera-based ergonomics assessment built to a documented
+              ISO standard, not a wearable gimmick (Statura Labs Dynamics).
             </p>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
               The AI is the delivery layer. The expertise is the product — years of health &amp;
@@ -74,7 +74,7 @@ export default function Home() {
             borderTop: "1px solid var(--line-soft)",
           }}
         >
-          <Stat n="06" label="Live products" />
+          <Stat n="07" label="Live products" />
           <Stat n="02" label="Sub-brands" />
           <Stat n="02" label="In development" />
           <Stat n="01" label="Operator" />
