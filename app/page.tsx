@@ -339,7 +339,24 @@ function FeatureCard({
 
   const content = (
     <>
-      {product.logo && (
+      {product.logo && product.slug === "buzomed" && (
+        <img
+          src={product.logo}
+          alt=""
+          aria-hidden
+          style={{
+            position: "absolute",
+            right: 12,
+            bottom: large ? 80 : 62,
+            width: large ? 220 : 170,
+            height: "auto",
+            opacity: 0.45,
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+      )}
+      {product.logo && product.slug !== "buzomed" && (
         <img
           src={product.logo}
           alt=""
