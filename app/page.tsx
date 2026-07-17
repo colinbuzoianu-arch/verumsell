@@ -174,18 +174,29 @@ export default function Home() {
 
         <div className="grid-2col">
           <SubBrandCard
-            name="CoupleIQ"
-            description="Relationship apps grounded in real psychology. SplitOrNot and Couple Analyzer — diagnose where things are, surface what's hidden, prescribe what to do."
-            accent="var(--coupleiq)"
-            href="/work/coupleiq"
+            name="WLS"
+            href="https://worldlegalservice.com"
+            external
+            background="#FAF8F1"
+            textColor="var(--wls-gold)"
+            bodyColor="rgba(28, 23, 16, 0.75)"
+            linkLabel="Visit the publication →"
+            pillars={[
+              { name: "AI Governance", blurb: "Can algorithms replace or augment political institutions?" },
+              { name: "Humanoid Robotics & Law", blurb: "Liability, personhood, labor law, weapons systems." },
+              { name: "EU Policy Critique", blurb: "Resource allocation and democratic accountability, held to account." },
+              { name: "Global Peace Frameworks", blurb: "Where international law is failing, and what comes next." },
+              { name: "Eastern European Angle", blurb: "Romania, Hungary, and post-communist governance as a case study." },
+            ]}
           />
           <SubBrandCard
             name="Buzomed"
             description="Occupational medicine practice management for Romanian clinics, expanding to DACH. Multi-tenant SaaS for the day-to-day of medicina muncii — companies, employees, examinations, reports."
-            accent="var(--buzomed)"
             href="/work/buzomed"
-            darkBg="var(--buzomed)"
-            darkGlow="var(--buzomed-teal)"
+            background="var(--buzomed)"
+            textColor="var(--paper)"
+            headingColor="var(--buzomed-teal)"
+            bodyColor="rgba(242, 239, 233, 0.9)"
           />
         </div>
       </section>
@@ -477,34 +488,40 @@ function StatusPill({ status, ink }: { status: string; ink: string }) {
 function SubBrandCard({
   name,
   description,
-  accent,
+  pillars,
+  background,
+  textColor,
+  headingColor,
+  bodyColor,
   href,
-  darkBg,
-  darkGlow,
+  external,
+  linkLabel = "Explore the line →",
 }: {
   name: string;
-  description: string;
-  accent: string;
+  description?: string;
+  pillars?: { name: string; blurb: string }[];
+  background: string;
+  textColor: string;
+  headingColor?: string;
+  bodyColor: string;
   href: string;
-  darkBg?: string;
-  darkGlow?: string;
+  external?: boolean;
+  linkLabel?: string;
 }) {
-  const dark = Boolean(darkBg);
-  return (
-    <Link
-      href={href}
-      style={{
-        background: dark ? darkBg : "var(--coupleiq-cream)",
-        color: dark ? "var(--paper)" : "var(--coupleiq)",
-        padding: "64px 48px",
-        minHeight: 380,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+  const cardStyle: React.CSSProperties = {
+    background,
+    color: textColor,
+    padding: "64px 48px",
+    minHeight: 380,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    position: "relative",
+    overflow: "hidden",
+  };
+
+  const inner = (
+    <>
       <div>
         <div
           style={{
@@ -524,21 +541,49 @@ function SubBrandCard({
             fontSize: "clamp(36px, 5vw, 80px)",
             marginBottom: 24,
             lineHeight: 0.95,
-            color: dark ? darkGlow : accent,
+            color: headingColor ?? textColor,
           }}
         >
           {name}
         </h3>
-        <p
-          style={{
-            fontSize: 17,
-            lineHeight: 1.6,
-            color: dark ? "rgba(242, 239, 233, 0.9)" : "rgba(58, 18, 8, 0.85)",
-            maxWidth: 460,
-          }}
-        >
-          {description}
-        </p>
+        {description && (
+          <p style={{ fontSize: 17, lineHeight: 1.6, color: bodyColor, maxWidth: 460 }}>
+            {description}
+          </p>
+        )}
+        {pillars && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {pillars.map((p, i) => (
+              <div key={p.name} style={{ display: "flex", gap: 14 }}>
+                <span
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: 11,
+                    color: headingColor ?? textColor,
+                    opacity: 0.55,
+                    flexShrink: 0,
+                    paddingTop: 2,
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p style={{ fontSize: 14, lineHeight: 1.55, color: bodyColor, maxWidth: 420 }}>
+                  <span
+                    style={{
+                      fontWeight: 600,
+                      letterSpacing: "0.02em",
+                      color: headingColor ?? textColor,
+                    }}
+                  >
+                    {p.name}
+                  </span>
+                  {" — "}
+                  {p.blurb}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <div
         style={{
@@ -549,8 +594,22 @@ function SubBrandCard({
           marginTop: 32,
         }}
       >
-        Explore the line →
+        {linkLabel}
       </div>
+    </>
+  );
+
+  if (external) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" style={cardStyle}>
+        {inner}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} style={cardStyle}>
+      {inner}
     </Link>
   );
 }
