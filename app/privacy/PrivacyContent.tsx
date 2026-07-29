@@ -15,7 +15,7 @@ const T = {
         This Privacy Policy explains how <strong>Verumsell SRL</strong> (&quot;Verumsell&quot;,
         &quot;we&quot;, &quot;us&quot;) handles personal data in connection with this website,{" "}
         <strong>verumsell.com</strong>. It does not cover the individual products we build —
-        Buzomed, Vivo, EN26 and the rest each publish their own privacy policy on their own
+        Buzomed, Vivo, GED and the rest each publish their own privacy policy on their own
         domain, linked from their respective pages.
       </>
     ),
@@ -152,7 +152,7 @@ const T = {
         Această Politică de confidențialitate explică modul în care <strong>Verumsell SRL</strong>{" "}
         („Verumsell”, „noi”) prelucrează datele cu caracter personal în legătură cu acest site,{" "}
         <strong>verumsell.com</strong>. Nu acoperă produsele individuale pe care le construim —
-        Buzomed, Vivo, EN26 și celelalte au fiecare propria politică de confidențialitate,
+        Buzomed, Vivo, GED și celelalte au fiecare propria politică de confidențialitate,
         publicată pe domeniul propriu, accesibilă din paginile lor dedicate.
       </>
     ),

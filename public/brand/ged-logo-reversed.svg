@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 88" width="360" height="88" role="img" aria-label="GED — Get Expiration Date (reversed)">
+  <g transform="translate(6,8) scale(1.125)">
+    <path fill-rule="evenodd" fill="#ECEFE9"
+      d="M27 13 L44 13 C47.87 13 51 16.13 51 20 L51 44 C51 47.87 47.87 51 44 51 L20 51 C16.13 51 13 47.87 13 44 L13 27 L27 13 Z
+         M25.5 22.5 A3 3 0 1 0 19.5 22.5 A3 3 0 1 0 25.5 22.5 Z"/>
+    <circle cx="37.5" cy="37" r="6.8" fill="#2E9E5B"/>
+  </g>
+  <text x="96" y="58" font-family="Archivo, 'Work Sans', system-ui, sans-serif" font-weight="800" font-size="48" letter-spacing="1.5" fill="#ECEFE9">GED</text>
+  <text x="98" y="76" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="3.2" fill="#9AA79F">GET  EXPIRATION  DATE</text>
+</svg>

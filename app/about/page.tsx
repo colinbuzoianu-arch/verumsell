@@ -251,7 +251,7 @@ const DISCIPLINES = [
   },
   {
     title: "Corporate Training",
-    desc: "Years designing and delivering programs that actually change behaviour. The foundation of every education product the studio builds — Studiu EN26, Studiu BAC, Sales Trainer.",
+    desc: "Years designing and delivering programs that actually change behaviour. The foundation of every education product the studio builds — Studiu BAC, Sales Trainer.",
   },
   {
     title: "Acting (formal training)",

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="GED mark">
+  <path fill-rule="evenodd" fill="#16211C"
+    d="M27 13 L44 13 C47.87 13 51 16.13 51 20 L51 44 C51 47.87 47.87 51 44 51 L20 51 C16.13 51 13 47.87 13 44 L13 27 L27 13 Z
+       M25.5 22.5 A3 3 0 1 0 19.5 22.5 A3 3 0 1 0 25.5 22.5 Z"/>
+  <circle cx="37.5" cy="37" r="6.8" fill="#2E9E5B"/>
+</svg>

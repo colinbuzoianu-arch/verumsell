@@ -79,7 +79,7 @@ Or transfer nameservers to Vercel (simpler but less flexible).
 Each Vercel project can claim its own subdomain. For example:
 
 - `homeopathy.verumsell.com` → Vivo project
-- `studiu.verumsell.com` → Studiu EN26 project
+- `ged.verumsell.com` → GED project (or keep getexpirationdate.com)
 - `splitornot.verumsell.com` → SplitOrNot project (or keep splitornot.com)
 - `buzomed.verumsell.com` → Buzomed project (or keep buzomed.com)
 
