@@ -32,7 +32,7 @@ const T = {
     s4_li3: "— use the site for any unlawful purpose, or in a way that could damage, disable, or impair it.",
     s5_title: "Third-party links",
     s5_p1:
-      "This site links to products and services we've built (Buzomed, Vivo, GED, SplitOrNot, and others), each hosted on its own domain with its own terms and privacy policy. We're not responsible for the content, terms, or data practices of any third-party site we link to, including those.",
+      "This site links to products and services we've built (Buzomed, Vivo, GED, and others), each hosted on its own domain with its own terms and privacy policy. We're not responsible for the content, terms, or data practices of any third-party site we link to, including those.",
     s6_title: "No warranty",
     s6_p1:
       "This site is provided \"as is\", without warranties of any kind, express or implied, including as to accuracy, completeness, or fitness for a particular purpose. We make reasonable efforts to keep information on this site current, but descriptions of products, features, or pricing may lag behind what's actually shipped — check the product's own site for the current state.",
@@ -86,7 +86,7 @@ const T = {
     s4_li3: "— folosiți site-ul în scopuri ilegale sau într-un mod care ar putea să-l deterioreze, dezactiveze sau afecteze.",
     s5_title: "Linkuri către terți",
     s5_p1:
-      "Acest site face trimitere către produse și servicii pe care le-am construit (Buzomed, Vivo, GED, SplitOrNot și altele), fiecare găzduit pe propriul domeniu, cu proprii termeni și politică de confidențialitate. Nu suntem responsabili pentru conținutul, termenii sau practicile de date ale niciunui site terț către care facem trimitere, inclusiv ale acestora.",
+      "Acest site face trimitere către produse și servicii pe care le-am construit (Buzomed, Vivo, GED și altele), fiecare găzduit pe propriul domeniu, cu proprii termeni și politică de confidențialitate. Nu suntem responsabili pentru conținutul, termenii sau practicile de date ale niciunui site terț către care facem trimitere, inclusiv ale acestora.",
     s6_title: "Fără garanții",
     s6_p1:
       "Acest site este oferit „ca atare”, fără garanții de niciun fel, explicite sau implicite, inclusiv în privința acurateței, integralității sau adecvării pentru un anumit scop. Facem eforturi rezonabile pentru a păstra informațiile de pe acest site actuale, dar descrierile produselor, funcționalităților sau prețurilor pot rămâne în urma a ceea ce este efectiv livrat — verificați site-ul propriu al produsului pentru starea actuală.",

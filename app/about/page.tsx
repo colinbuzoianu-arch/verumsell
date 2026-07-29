@@ -278,7 +278,7 @@ const APPROACH = [
   },
   {
     title: "Privacy as default",
-    desc: "Where we can avoid storing personal data, we do. Most CoupleIQ assessments hold nothing after the session ends.",
+    desc: "Where we can avoid storing personal data, we do. Most assessment flows hold nothing after the session ends.",
   },
 ];
 

@@ -50,13 +50,10 @@ export default function Footer() {
             <a href="https://worldlegalservice.com" target="_blank" rel="noreferrer">WLS — World Legal Services</a>
             <a href="https://statura.verumsell.com" target="_blank" rel="noreferrer">Statura Labs Dynamics</a>
             <a href="https://getexpirationdate.com" target="_blank" rel="noreferrer">GED — Get Expiration Date</a>
-            <a href="https://splitornot.com" target="_blank" rel="noreferrer">SplitOrNot</a>
-            <a href="https://animamundi.verumsell.com" target="_blank" rel="noreferrer">Anima Mundi</a>
             <a href="https://vivo.verumsell.com" target="_blank" rel="noreferrer">Vivo</a>
           </FooterCol>
 
           <FooterCol title="Sub-brands">
-            <Link href="/work/coupleiq">CoupleIQ</Link>
             <Link href="/work/buzomed">Buzomed</Link>
             <a href="mailto:colinbuzoianu@verumsell.com" style={{ marginTop: 16, display: "block", color: "#9C968B", fontSize: 13 }}>
               colinbuzoianu@verumsell.com

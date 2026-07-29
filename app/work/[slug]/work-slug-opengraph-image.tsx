@@ -17,9 +17,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
   const bgMap: Record<string, [string, string, string]> = {
     vivo:            ["#E8EDD9", "#DDD3B8", "#1F3A1A"],
     ged:             ["#ECEFE9", "#BFE0CB", "#16211C"],
-    splitornot:      ["#F5EBD8", "#E8C9BA", "#3A1208"],
     "wls":           ["#FAF8F1", "#EDE5CE", "#1C1710"],
-    "anima-mundi":   ["#2A1F4A", "#15102A", "#E8E2F5"],
     "buzomed":       ["#DCEAF5", "#B8D8DA", "#0A1F3A"],
     "studiu-bac":    ["#D6E3EE", "#A8C5D9", "#0A1F2E"],
     "sales-trainer": ["#D6E0DA", "#A8B8B0", "#0F1F1A"],

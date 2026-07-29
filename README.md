@@ -31,7 +31,7 @@ app/
   work/
     page.tsx              ← full portfolio listing by category
     [slug]/page.tsx       ← dynamic product detail page
-    coupleiq/page.tsx     ← CoupleIQ sub-brand page
+    buzomed/page.tsx      ← Buzomed sub-brand page
 
 components/
   Nav.tsx                 ← top nav with inline SVG wordmark
@@ -80,7 +80,6 @@ Each Vercel project can claim its own subdomain. For example:
 
 - `homeopathy.verumsell.com` → Vivo project
 - `ged.verumsell.com` → GED project (or keep getexpirationdate.com)
-- `splitornot.verumsell.com` → SplitOrNot project (or keep splitornot.com)
 - `buzomed.verumsell.com` → Buzomed project (or keep buzomed.com)
 
 In each app's Vercel project, go to **Settings → Domains** and add the subdomain. The DNS auto-resolves once `verumsell.com` is on Vercel.
@@ -98,5 +97,5 @@ To change the live URLs of each app, set the `url` field on each product.
 
 - The aesthetic is **editorial studio** — black on warm ivory, oversized Fraunces serif, mono accents.
 - The geometric horizontal bars throughout reference the Verumsell logo.
-- Each product carries its own colour identity (Vivo sage, Studiu red/blue, CoupleIQ coral, Buzomed clinical blue) — these come through on category and detail pages without breaking the master brand.
-- Sub-brands (CoupleIQ, Buzomed) get their own dedicated treatment.
+- Each product carries its own colour identity (Vivo sage, Studiu blue, GED green, Buzomed clinical blue) — these come through on category and detail pages without breaking the master brand.
+- Sub-brands (Buzomed) get their own dedicated treatment.

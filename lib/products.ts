@@ -4,7 +4,7 @@ export interface Product {
   slug: string;
   name: string;
   tagline: string;
-  category: "Health & Wellness" | "Education" | "Relationships" | "Sales & Training" | "Occupational Health" | "AI Governance";
+  category: "Health & Wellness" | "Education" | "Sales & Training" | "Occupational Health" | "AI Governance";
   status: Status;
   year: string;
   url?: string;
@@ -12,7 +12,7 @@ export interface Product {
   external?: boolean;
   /** Optional brand mark rendered as a watermark on feature cards. */
   logo?: string;
-  subBrand?: "CoupleIQ" | "Buzomed" | "Anima Mundi";
+  subBrand?: "Buzomed";
   accent: string;
   accentInk: string;
   background: string;
@@ -83,30 +83,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "anima-mundi",
-    name: "Anima Mundi",
-    tagline: "Spiritual guidance through six archetypal voices",
-    category: "Health & Wellness",
-    status: "beta",
-    year: "2025",
-    url: "https://animamundi.verumsell.com",
-    subBrand: "Anima Mundi",
-    accent: "var(--animamundi-glow)",
-    accentInk: "#E8E2F5",
-    background: "linear-gradient(135deg, #2A1F4A 0%, #15102A 100%)",
-    description:
-      "An AI spiritual companion that speaks through six archetypal guides — the Sage, the Mystic, the Healer, the Warrior, the Lover, and the Trickster. Reflection, not fortune-telling.",
-    expertLayer:
-      "Each archetype is grounded in Jungian psychology and classical wisdom traditions, with its own distinct voice, perspective, and way of questioning.",
-    audience: "People seeking a reflective, symbolic space to think through life's questions.",
-    highlights: [
-      "Six distinct archetypal guides, each with its own voice",
-      "Grounded in Jungian archetypes and wisdom traditions",
-      "Conversation as reflection, not prediction",
-      "Live at animamundi.verumsell.com",
-    ],
-  },
-  {
     slug: "wls",
     name: "WLS",
     tagline: "Rethinking the rules that govern us",
@@ -155,30 +131,6 @@ export const PRODUCTS: Product[] = [
       "Dual assessment modes — scheduled spot-checks and continuous monitoring — treated as separate products under legal review",
       "EU AI Act classification memo and Article 9 (biometric data) legal opinion in progress",
       "Bilingual consent workflow built in from day one",
-    ],
-  },
-  {
-    slug: "splitornot",
-    name: "SplitOrNot",
-    tagline: "Relationship health, honestly scored",
-    category: "Relationships",
-    status: "live",
-    year: "2026",
-    url: "https://splitornot.com",
-    subBrand: "CoupleIQ",
-    accent: "var(--coupleiq)",
-    accentInk: "#3A1208",
-    background: "linear-gradient(135deg, #F5EBD8 0%, #E8C9BA 100%)",
-    description:
-      "A multi-dimensional relationship health analyzer. Maps communication, intimacy, alignment, and conflict patterns — then names the risks and prescribes what to actually change.",
-    expertLayer:
-      "Built on the Gottman Method's predictors, attachment theory, and conflict-style research. Every insight ties back to a specific answer pattern — diagnostic, not generic.",
-    audience: "Couples ready to get an honest read and do the work.",
-    highlights: [
-      "Multi-dimensional relationship audit across 4 domains",
-      "Specific risks named, not glossed over",
-      "Concrete improvement vectors — what to actually change",
-      "Built on 40 years of relationship science",
     ],
   },
   {
@@ -253,7 +205,6 @@ export const CATEGORIES = [
   "Occupational Health",
   "AI Governance",
   "Education",
-  "Relationships",
   "Sales & Training",
 ] as const;
 
@@ -265,6 +216,6 @@ export function byCategory(cat: string): Product[] {
   return PRODUCTS.filter((p) => p.category === cat);
 }
 
-export function bySubBrand(brand: "CoupleIQ" | "Buzomed" | "Anima Mundi"): Product[] {
+export function bySubBrand(brand: "Buzomed"): Product[] {
   return PRODUCTS.filter((p) => p.subBrand === brand);
 }

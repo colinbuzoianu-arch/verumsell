@@ -74,8 +74,8 @@ export default function Home() {
             borderTop: "1px solid var(--line-soft)",
           }}
         >
-          <Stat n="07" label="Live products" />
-          <Stat n="02" label="Sub-brands" />
+          <Stat n="05" label="Live products" />
+          <Stat n="01" label="Sub-brands" />
           <Stat n="02" label="In development" />
           <Stat n="01" label="Operator" />
         </div>
@@ -135,8 +135,7 @@ export default function Home() {
           <FeatureCard product={live[1]} span={5} />
           <FeatureCard product={live[2]} span={5} />
           <FeatureCard product={live[3]} span={7} large />
-          <FeatureCard product={live[4]} span={7} large />
-          <FeatureCard product={live[5]} span={5} />
+          <FeatureCard product={live[4]} span={12} wide />
         </div>
       </section>
 
