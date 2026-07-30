@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     name: "GED",
     tagline: "Keep every obligation in the green.",
     category: "Occupational Health",
-    status: "beta",
+    status: "live",
     year: "2026",
     url: "https://getexpirationdate.com",
     logo: "/brand/ged-mark.svg",
@@ -112,7 +112,7 @@ export const PRODUCTS: Product[] = [
     name: "Statura Labs Dynamics",
     tagline: "Camera-based ergonomics, without the wearables",
     category: "Occupational Health",
-    status: "beta",
+    status: "live",
     year: "2026",
     url: "https://staturalabs.com",
     logo: "/brand/statura_logo_on_light.png",
@@ -201,10 +201,10 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const CATEGORIES = [
-  "Health & Wellness",
   "Occupational Health",
   "AI Governance",
   "Education",
+  "Health & Wellness",
   "Sales & Training",
 ] as const;
 
