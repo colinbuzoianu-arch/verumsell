@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CustosArchitectureDeepDive from "@/components/CustosArchitectureDeepDive";
 
 const INK = "#16181D";
 const IVORY = "#F4F1EA";
@@ -78,6 +79,9 @@ export default function CustosPage() {
         }
         @media (min-width: 769px) {
           .custos-mobile-hero { display: none; }
+        }
+        @media (max-width: 600px) {
+          .custos-deepdive-scroll { max-height: 480px !important; }
         }
       `}</style>
 
@@ -292,6 +296,8 @@ export default function CustosPage() {
             ))}
           </div>
         </div>
+
+        <CustosArchitectureDeepDive />
       </section>
 
       {/* ── SIX CAPABILITIES ── */}
