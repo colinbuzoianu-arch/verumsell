@@ -114,9 +114,6 @@ export default function CustosPage() {
             <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.7 }}>
               AI Governance
             </span>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", padding: "6px 10px", border: `1px solid ${INK}`, opacity: 0.8 }}>
-              ◌ In dev
-            </span>
           </div>
 
           <h1 className="display" style={{ fontSize: "clamp(48px, 11vw, 160px)", fontWeight: 400, lineHeight: 0.9, marginBottom: 24, color: INK }}>

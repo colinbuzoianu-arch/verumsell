@@ -409,7 +409,7 @@ function FeatureCard({
           >
             {product.category}
           </span>
-          <StatusPill status={product.status} ink={product.accentInk} />
+          {product.slug !== "custos" && <StatusPill status={product.status} ink={product.accentInk} />}
         </div>
         <h3
           className="display"

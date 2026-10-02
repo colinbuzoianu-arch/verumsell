@@ -108,7 +108,7 @@ export default function WorkPage() {
                         >
                           {p.name}
                         </h3>
-                        <StatusPill status={p.status} ink={p.accentInk} />
+                        {p.slug !== "custos" && <StatusPill status={p.status} ink={p.accentInk} />}
                         {p.subBrand && (
                           <span
                             style={{
