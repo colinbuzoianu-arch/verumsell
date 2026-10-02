@@ -198,6 +198,32 @@ export const PRODUCTS: Product[] = [
       "Lifestyle considerations and clinical cautions included",
     ],
   },
+  {
+    slug: "custos",
+    name: "Custos",
+    tagline: "Runtime control for AI agents",
+    category: "AI Governance",
+    status: "in-development",
+    year: "2026",
+    logo: "/brand/custos-mark.svg",
+    accent: "var(--custos-rust)",
+    accentInk: "#16181D",
+    background: "linear-gradient(135deg, #F4F1EA 0%, #E6D3C4 100%)",
+    description:
+      "Custos sits between a company's AI agents and the tools they use. Every call is identified, checked against policy, recorded in a tamper-evident log, and then allowed, blocked or held for a human — before it happens, not after.",
+    expertLayer:
+      "Built as infrastructure, not a chatbot: a single Rust gateway that runs inside the customer's network, default-deny Cedar policies, hash-chained audit records with keyed hashing of arguments for GDPR, and fail-closed behaviour on every error path. The gateway is open source; Custos Control adds agent management, human approvals and evidence exports for the EU AI Act, NIS2 and GDPR.",
+    audience:
+      "European companies running AI agents in production — security, IT and compliance teams in the DACH region and Romania.",
+    highlights: [
+      "Own identity and short-lived token for every agent, with a named owner",
+      "Default-deny policies in Cedar, versioned and checked before they go live",
+      "Detects IBANs, card numbers, CNP, Steuer-ID, secrets and bulk exports in each call",
+      "Risky actions wait for a named person to approve them",
+      "Hash-chained audit log that proves it was not edited",
+      "Self-hosted in the customer's network; open-source gateway, Apache 2.0",
+    ],
+  },
 ];
 
 export const CATEGORIES = [

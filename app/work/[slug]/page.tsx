@@ -4,7 +4,7 @@ import { PRODUCTS, bySlug } from "../../../lib/products";
 
 export function generateStaticParams() {
   return PRODUCTS
-    .filter((p) => p.slug !== "buzomed" && !p.external)
+    .filter((p) => p.slug !== "buzomed" && p.slug !== "custos" && !p.external)
     .map((p) => ({ slug: p.slug }));
 }
 

@@ -1,8 +1,12 @@
 import Link from "next/link";
-import { PRODUCTS } from "../lib/products";
+import { PRODUCTS, bySlug } from "../lib/products";
 
 export default function Home() {
-  const live = PRODUCTS.filter((p) => p.status === "live" || p.status === "beta");
+  const live = PRODUCTS.filter(
+    (p) => (p.status === "live" || p.status === "beta") && p.slug !== "buzomed" && p.slug !== "vivo"
+  );
+  const vivo = bySlug("vivo")!;
+  const buzomed = bySlug("buzomed")!;
 
   return (
     <>
@@ -133,9 +137,9 @@ export default function Home() {
         <div className="grid-12col">
           <FeatureCard product={live[0]} span={7} large />
           <FeatureCard product={live[1]} span={5} />
-          <FeatureCard product={live[2]} span={5} />
-          <FeatureCard product={live[3]} span={7} large />
-          <FeatureCard product={live[4]} span={12} wide />
+          <FeatureCard product={live[2]} span={12} wide />
+          <FeatureCard product={vivo} span={7} large />
+          <FeatureCard product={buzomed} span={5} />
         </div>
       </section>
 
@@ -189,13 +193,13 @@ export default function Home() {
             ]}
           />
           <SubBrandCard
-            name="Buzomed"
-            description="Occupational medicine practice management for Romanian clinics, expanding to DACH. Multi-tenant SaaS for the day-to-day of medicina muncii — companies, employees, examinations, reports."
-            href="/work/buzomed"
-            background="var(--buzomed)"
-            textColor="var(--paper)"
-            headingColor="var(--buzomed-teal)"
-            bodyColor="rgba(242, 239, 233, 0.9)"
+            name="Custos"
+            description="Runtime control for AI agents. Custos sits between a company's agents and the tools they use — every call identified, checked against policy, and recorded in a tamper-evident log before it happens, not after."
+            href="/work/custos"
+            background="#F4F1EA"
+            textColor="var(--custos-ink)"
+            headingColor="var(--custos-rust)"
+            bodyColor="rgba(22, 24, 29, 0.75)"
           />
         </div>
       </section>

@@ -29,6 +29,8 @@
   --wls-gold: #B08D2E;        /* WLS brass */
   --sld-slate: #1C2226;        /* SLD graphite ink */
   --sld-steel: #7C8A94;        /* SLD instrument steel */
+  --custos-rust: #B3401A;      /* Custos rust accent */
+  --custos-ink: #16181D;       /* Custos ink */
 
   /* ── type scale ────────────────────────────────────────── */
   --font-display: 'Fraunces', 'Times New Roman', serif;
