@@ -60,8 +60,8 @@ export default function Home() {
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
               Anyone can wrap a chatbot. We build expert systems — occupational medicine software
               for the workflow Romanian clinics actually run on (Buzomed), AI governance analysis
-              grounded in EU law (WLS), and camera-based ergonomics assessment built to a documented
-              ISO standard, not a wearable gimmick (Statura Labs Dynamics).
+              grounded in EU law (WLS), and instrumented ergonomics assessment scored against a
+              documented ISO standard — no camera, no wearables, no sensors (Statura Labs Dynamics).
             </p>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: "var(--ink-soft)" }}>
               The AI is the delivery layer. The expertise is the product — years of health &amp;

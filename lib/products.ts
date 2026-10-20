@@ -110,7 +110,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: "statura-labs-dynamics",
     name: "Statura Labs Dynamics",
-    tagline: "Camera-based ergonomics, without the wearables",
+    tagline: "Ergonomic risk, measured like an instrument — no camera, no wearables",
     category: "Occupational Health",
     status: "live",
     year: "2026",
@@ -120,17 +120,20 @@ export const PRODUCTS: Product[] = [
     accentInk: "var(--sld-slate)",
     background: "linear-gradient(135deg, #E4E8EA 0%, #C3CBCF 100%)",
     description:
-      "A camera-based workplace ergonomics assessment platform for industrial and manufacturing environments. Single-camera pose analysis scores real work against ISO 11228 and EN 1005 ergonomic standards — no wearables, no employee identifiers, and video is discarded the instant it's processed.",
+      "An instrumented ergonomics risk-assessment platform for industrial and manufacturing workplaces. A trained assessor rates real postures in the field; load, force and duration are captured as structured context; and joint angles are scored region by region against ISO 11228 and EN 1005. No camera, no wearables, no sensors — a posture is assessed, never a person — and the output is a documented report, ready for the company's EHS file.",
     expertLayer:
-      "Built workstation-first, not worker-first: the data model carries no employee identifiers by design. Pose estimation runs client-side, video is never stored, and every score traces back to a documented ISO 11228 / EN 1005 methodology. Legal counsel has reviewed the approach twice on EU AI Act classification and GDPR — scheduled and continuous monitoring are treated as legally distinct products, not a toggle.",
-    audience: "EU manufacturing and industrial employers, sold B2B — currently in a non-commercial field pilot at a drilling-equipment manufacturing facility.",
+      "Built to measure what used to be estimated. Every threshold traces back to a documented ISO 11228 / EN 1005 methodology rather than a proprietary black box, and the scoring logic is versioned and documented. The data model carries no identity data by design — each measurement is tied to a workstation, never to a name, face or personnel file — with GDPR data minimisation and current EU AI Act requirements designed in from the first line of code, not retrofitted. Legal limits, terminology and the generated document all follow the country a workplace is actually in.",
+    audience: "Occupational safety and health staff across the DACH region — the people who own the Evaluierung, the SGD and the labour-inspectorate file. Live in Austria, with Germany and Switzerland in preparation; currently in a technical pilot with industrial manufacturing partners.",
     highlights: [
-      "Single 2D camera, client-side MediaPipe pose estimation — video discarded post-inference",
-      "Workstation-centric data model: no employee identifiers stored",
-      "Scoring engine mapped to ISO 11228 and EN 1005 ergonomic standards",
-      "Dual assessment modes — scheduled spot-checks and continuous monitoring — treated as separate products under legal review",
-      "EU AI Act classification memo and Article 9 (biometric data) legal opinion in progress",
-      "Bilingual consent workflow built in from day one",
+      "Observation-based assessment: a trained assessor rates real postures in the field — no camera, no wearables, no sensors",
+      "Load, force, duration and tool captured as structured context alongside each posture",
+      "Joint angles scored region by region — trunk, neck, shoulders, elbows, wrists and knees",
+      "Thresholds mapped to ISO 11228 and EN 1005, with scoring logic versioned and documented — no proprietary black box",
+      "A posture is assessed, never a person: no identity data, each measurement tied to a workstation, not a name or face",
+      "Country-aware output: legal limits, terminology and the generated EHS document follow the workplace's country",
+      "GDPR data minimisation and EU AI Act alignment designed in from day one, not retrofitted",
+      "Interface in English, German and Romanian",
+      "On the roadmap: human–robot shared-workspace assessment, in technical pilot under separate functional-safety review",
     ],
   },
   {
