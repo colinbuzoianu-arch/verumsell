@@ -46,7 +46,7 @@ export default function Footer() {
           </FooterCol>
 
           <FooterCol title="Live products">
-            <a href="https://buzomed.com" target="_blank" rel="noreferrer">Buzomed</a>
+            <a href="https://www.buzomed.com" target="_blank" rel="noreferrer">Buzomed</a>
             <a href="https://worldlegalservice.com" target="_blank" rel="noreferrer">WLS — World Legal Services</a>
             <a href="https://statura.verumsell.com" target="_blank" rel="noreferrer">Statura Labs Dynamics</a>
             <a href="https://getexpirationdate.com" target="_blank" rel="noreferrer">GED — Get Expiration Date</a>

@@ -11,7 +11,23 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const p = bySlug(params.slug);
   if (!p) return {};
-  return { title: `${p.name} — Verumsell`, description: p.tagline };
+
+  const canonical = p.seo?.canonical ?? `https://www.verumsell.com/work/${p.slug}`;
+  const title = p.seo?.title ?? `${p.name} — Verumsell`;
+  const description = p.seo?.description ?? p.tagline;
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "website",
+      ...(p.seo?.ogLocale ? { locale: p.seo.ogLocale } : {}),
+    },
+  };
 }
 
 export default function ProductPage({ params }: { params: { slug: string } }) {

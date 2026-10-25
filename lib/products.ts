@@ -1,5 +1,18 @@
 export type Status = "live" | "beta" | "in-development";
 
+/**
+ * Optional per-project SEO overrides. When present, the case-study page uses
+ * these instead of the generic `${name} — Verumsell` / tagline defaults, so each
+ * /work page can carry its own title, description, canonical URL and OG locale.
+ */
+export interface ProductSeo {
+  title: string;
+  description: string;
+  canonical: string;
+  /** e.g. "ro_RO" or "en_US". Defaults to en_US when omitted. */
+  ogLocale?: string;
+}
+
 export interface Product {
   slug: string;
   name: string;
@@ -20,6 +33,8 @@ export interface Product {
   expertLayer: string;
   audience: string;
   highlights: string[];
+  /** Optional per-project SEO overrides (title/description/canonical/OG locale). */
+  seo?: ProductSeo;
 }
 
 export const PRODUCTS: Product[] = [
@@ -30,8 +45,15 @@ export const PRODUCTS: Product[] = [
     category: "Occupational Health",
     status: "live",
     year: "2026",
-    url: "https://buzomed.com",
+    url: "https://www.buzomed.com",
     subBrand: "Buzomed",
+    seo: {
+      title: "Buzomed — software și platformă pentru medicina muncii | Verumsell",
+      description:
+        "Buzomed, platforma online pentru cabinete de medicina muncii: examinări, fișa de aptitudine conform HG 355/2007, scadențe și facturare. Dezvoltat de Verumsell.",
+      canonical: "https://www.verumsell.com/work/buzomed",
+      ogLocale: "ro_RO",
+    },
     logo: "/brand/buzomed-mark.png",
     accent: "var(--buzomed)",
     accentInk: "#0A1F3A",
